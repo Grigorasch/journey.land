@@ -1,0 +1,38 @@
+.link-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: #1d1e20;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+.link-list__logo {
+  width: 60%;
+  margin-bottom: 0.2em;
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+}
+.link-list__icon {
+  margin-right: 0.4em;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+.link-list__icon_size_m {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+.link-list_aside-list {
+  flex-direction: column;
+  gap: 0.9em;
+}
+.link-list__logo_color_purple {
+  background: #7358e5;
+}
+.link-list__logo_color_black {
+  background: #000000;
+}

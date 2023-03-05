@@ -1,0 +1,26 @@
+.header__wrapper_links {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+.header__wrapper_social {
+  margin: auto;
+  width: 650px;
+  height: 50px;
+  color: #1972de;
+}
+.header__wrapper_feedback {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  text-align: center;
+}
+.header__wrapper_statistic {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.header__wrapper_navigation {
+  color: #ffffff;
+}

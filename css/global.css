@@ -1,0 +1,58 @@
+.button {
+  width: 170px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3b3c3f;
+  background: #e7e7ee;
+  border-radius: 0.5em;
+  border: 2px solid #e7e7ee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  border-right-color: #919191;
+  border-bottom-color: #919191;
+  text-decoration: underline;
+}
+.button:active {
+  border-top-color: #919191;
+  border-left-color: #919191;
+}
+.button:active:hover {
+  border-right-color: #e7e7ee;
+  border-bottom-color: #e7e7ee;
+}
+
+.icon_size_header-heart {
+  margin-right: 20px;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.logo_size_header {
+  height: 55px;
+  vertical-align: bottom;
+}
+
+.position_center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.text_size_s {
+  font-size: 11px;
+  font-weight: 700;
+}
+.text_size_m {
+  font-size: 12px;
+  font-weight: 700;
+}
+.text_size_l {
+  font-size: 16px;
+  font-weight: 500;
+}
+.text_color_white {
+  color: #FFFFFF;
+}
