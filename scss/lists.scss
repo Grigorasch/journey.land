@@ -1,12 +1,10 @@
 .link-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-left: 1em;
     padding-right: 1em;
     // width: 100%;
     // height: 100%;
-    background: #1d1e20;
     border-radius: 8px;
     color: #FFFFFF;
 
@@ -46,6 +44,12 @@
             &_black {
                 background: #000000;
             }
+        }
+    }
+
+    &_background {
+        &_black {
+            background: #1d1e20;
         }
     }
 }

@@ -10,6 +10,7 @@ $border_color: #4f4c4e;
       padding-left: 40px;
     }
     &_social {
+      align-items: center;
       margin: auto;
       width: 650px;
       height: 50px;
@@ -19,14 +20,23 @@ $border_color: #4f4c4e;
       grid-row-start: 2;
       grid-row-end: 4;
       text-align: center;
+      background: #211e21ed;
+      border-top-left-radius: 1rem;
+      border-right: 2px solid $border_color; 
     }
     &_statistic {
+      padding-top: 2px;
       padding-left: 10px;
       font-size: 14px;
       font-weight: 600;
+      color: #ffffff;
+      background: #211e21ed;
+      border-top-right-radius: 1rem;
+      border-bottom: 2px solid $border_color; 
     }
     &_navigation {
       color: #ffffff;
+      background: #211e21ed;
     }
   }
 }

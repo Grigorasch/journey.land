@@ -1,0 +1,23 @@
+$border_color: #4f4c4e;
+
+
+.aside {
+    &__wrapper {
+        &_menu {
+            text-align: center;
+
+            & div {
+                padding: 15px 0;
+            }
+
+            & div:not(:last-of-type) {
+                border-bottom: 2px solid $border_color;
+            }
+        }
+        &_navigation {
+            padding: 15px 0;
+
+            text-align: start;
+        }
+    }
+}

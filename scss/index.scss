@@ -15,15 +15,30 @@ header, nav {
   vertical-align: baseline;
 }
 
-aside, footer, header, nav {
+
+aside, nav {
   display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html, body {
+  width: 100%;
+  // height: 100%;
 }
 
 body {
   display: grid;
-  grid-template:  "head head" 150px
+  grid-template:  "head head" 170px
                   "aside main" 1fr
                   "aside footer" 65px / 250px  1fr;
+  padding: 0 10px 15px;
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1;
   background: url(../images/background.png) top no-repeat;
@@ -39,16 +54,30 @@ header {
 
 aside {
   grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-left-radius: 1rem;
   border-right: 2px solid $border_color;
+  background: #211e21ed;
 }
 
 main {
   grid-area: main;
   border-bottom: 2px solid $border_color;
+  background: #211e21ed;
 }
 
 footer {
   grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-right-radius: 1rem;
+  background: #211e21ed;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 ul {

@@ -1,10 +1,8 @@
 .link-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-left: 1em;
   padding-right: 1em;
-  background: #1d1e20;
   border-radius: 8px;
   color: #FFFFFF;
 }
@@ -35,4 +33,7 @@
 }
 .link-list__logo_color_black {
   background: #000000;
+}
+.link-list_background_black {
+  background: #1d1e20;
 }

@@ -1,0 +1,13 @@
+.aside__wrapper_menu {
+  text-align: center;
+}
+.aside__wrapper_menu div {
+  padding: 15px 0;
+}
+.aside__wrapper_menu div:not(:last-of-type) {
+  border-bottom: 2px solid #4f4c4e;
+}
+.aside__wrapper_navigation {
+  padding: 15px 0;
+  text-align: start;
+}
