@@ -1,0 +1,38 @@
+.content {
+    margin: 40px auto 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 400px);
+    gap: 4px;
+    width: fit-content;
+
+    &__images {
+        width: 100%;
+        height: 100%;
+        border: 5px solid #fd3efa;
+        border-radius: 11px;
+        box-shadow: 0 0 20px 0px #fd3efa;
+    }
+    &__wrapper {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        background: #7900ff;
+        border-radius: 40px;
+        text-align: center;
+        line-height: 400px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .content {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(4, 400px);
+
+        &__wrapper {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+    }
+}

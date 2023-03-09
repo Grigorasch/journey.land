@@ -40,3 +40,15 @@ $border_color: #4f4c4e;
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .header__wrapper_feedback {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .header__wrapper_statistic {
+    border-top-left-radius: 1rem;
+  }
+}

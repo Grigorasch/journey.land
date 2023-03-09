@@ -34,3 +34,15 @@
   color: #ffffff;
   background: rgba(33, 30, 33, 0.9294117647);
 }
+
+@media screen and (max-width: 1100px) {
+  .header__wrapper_feedback {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .header__wrapper_statistic {
+    border-top-left-radius: 1rem;
+  }
+}

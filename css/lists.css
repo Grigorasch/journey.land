@@ -12,6 +12,33 @@
   padding: 0.3em 0.5em;
   border-radius: 3px;
 }
+.link-list__logo_mapsme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.link-list__logo_mapsme img {
+  width: 50px;
+}
+.link-list__logo_mapsme span {
+  white-space: pre-line;
+  text-align: left;
+  margin-right: -36px;
+}
+.link-list__logo_mapsme span span {
+  font-size: 45px;
+  transform: scaleX(0.6);
+  letter-spacing: -2.2px;
+  display: inline-block;
+  transform-origin: left;
+}
+.link-list__logo_binance {
+  width: 150px;
+}
+.link-list__logo_binance + a {
+  word-wrap: break-word;
+}
 .link-list__icon {
   margin-right: 0.4em;
   width: 1.2em;
@@ -34,6 +61,17 @@
 .link-list__logo_color_black {
   background: #000000;
 }
+.link-list__logo_size_mapsme {
+  width: 50px;
+}
 .link-list_background_black {
   background: #1d1e20;
+}
+
+@media screen and (max-width: 720px) {
+  .link-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
 }

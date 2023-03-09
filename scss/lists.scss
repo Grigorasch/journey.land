@@ -13,6 +13,35 @@
         margin-bottom: 0.2em;
         padding: 0.3em 0.5em;
         border-radius: 3px;
+
+        &_mapsme {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+
+            & img {
+                width: 50px;
+            }
+            & span {
+                white-space: pre-line;
+                text-align: left;
+                margin-right: -36px;
+                & span {
+                    font-size: 45px;
+                    transform: scaleX(0.6);
+                    letter-spacing: -2.2px;
+                    display: inline-block;
+                    transform-origin: left;
+                }
+            }
+        }
+        &_binance {
+            width: 150px;
+            & + a {
+                word-wrap: break-word;
+            }
+        }
     }
 
     &__icon {
@@ -45,11 +74,24 @@
                 background: #000000;
             }
         }
+        &_size {
+            &_mapsme {
+                width: 50px;
+            }
+        }
     }
 
     &_background {
         &_black {
             background: #1d1e20;
         }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .link-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
     }
 }
