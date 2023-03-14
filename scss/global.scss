@@ -34,7 +34,6 @@ body {
     color: #ffffff;
     line-height: 1;
     background: url(../images/background.png) top no-repeat;
-    transition: 0.3s;
 }
 
 header {
@@ -117,6 +116,11 @@ aside {
     background: #211e21f0;
     font-size: 16px;
     font-weight: 600;
+    transition: width 0.3s, border cubic-bezier(1, 0.03, 1, 0.03) 0.4s, background cubic-bezier(1, 0.03, 1, 0.03) 0.4s;
+
+    & .link-list {
+        width: 270px;
+    }
 
     & .wrapper {
         margin-bottom: 30px;
@@ -138,7 +142,6 @@ aside {
 .feedback {
     height: 90px;
     text-align: center;
-    background: #211e21ed;
     border-top-left-radius: 1rem;
     border-bottom: 2px solid #4f4c4e;
 }
@@ -287,10 +290,6 @@ a {
 
 
 @media screen and (max-width: 1100px) {
-    body {
-        grid-template-columns: 0px 1fr;
-    }
-
     header {
         &>a {
             margin-left: 25px;
@@ -302,15 +301,17 @@ a {
         }
     }
 
-    .feedback, aside {
-        width: 1px;
-        height: 1px;
-        opacity: 0;
+    aside {
+        width: 0;
         overflow: hidden;
+        background: #211e2100;
+        border-color: #4f4c4e00;
+        transition: width 0.3s, border cubic-bezier(0, 0.97, 0, 0.98) 0.3s, background cubic-bezier(0, 0.97, 0, 0.98) 0.3s;
     }
 
-    .statistic {
+    .main-wrapper {
         border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
     }
 }
 
