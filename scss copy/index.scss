@@ -1,4 +1,58 @@
+$border_color: #4f4c4e;
 
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, p, a,
+img, ul, li, form, label, aside, footer,
+header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+aside, nav {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html, body {
+  width: 100%;
+  // height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template:  "head head" 170px
+                  "aside main" 1fr
+                  "aside footer" 65px / 250px  1fr;
+  padding: 0 10px 15px;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1;
+  background: url(../images/background.png) top no-repeat;
+  transition: 0.3s;
+}
+
+header {
+  grid-area: head;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1.5fr 1.25fr 1fr;
+  border-bottom: 2px solid $border_color;  
+  transition: 0.3s;
+}
 
 aside {
   grid-area: aside;
@@ -28,6 +82,20 @@ footer {
   color: #ffffff;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 @media screen and (max-width: 1300px) {
   body, header {
@@ -70,9 +138,3 @@ footer {
     grid-template-rows: 230px 1fr 100px;
   }
 }
-
-
-
-
-
-// Адаптация

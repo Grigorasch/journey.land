@@ -8,18 +8,13 @@
 }
 .link-list__logo {
   width: 60%;
-  margin-bottom: 0.2em;
+  margin-bottom: 1em;
   padding: 0.3em 0.5em;
   border-radius: 3px;
 }
-.link-list__logo_mapsme {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-}
 .link-list__logo_mapsme img {
-  width: 50px;
+  margin-bottom: 10px;
+  height: 70px;
 }
 .link-list__logo_mapsme span {
   white-space: pre-line;
@@ -38,6 +33,7 @@
 }
 .link-list__logo_binance + a {
   word-wrap: break-word;
+  font-size: 12px;
 }
 .link-list__icon {
   margin-right: 0.4em;
@@ -48,7 +44,7 @@
 .link-list__icon_size_m {
   width: 2em;
   height: 2em;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 .link-list_aside-list {

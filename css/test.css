@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, p, a,
+img, ul, li, form, label, aside, footer,
+header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+aside, nav {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px 10px;
+  min-height: 100%;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1;
+  background: url(../images/background.png) top no-repeat;
+  transition: 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+}
+header > a {
+  margin-left: 50px;
+}
+header .logo {
+  width: 70px;
+}
+header .wrapper {
+  margin: 0 auto;
+}
+header .wrapper .social {
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  height: 50px;
+  color: #1972de;
+}
+header .burger {
+  display: none;
+  flex-shrink: 0;
+  margin-right: 50px;
+  padding: 5px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4980392157);
+  border: none;
+  border-radius: 5px;
+}
+header .burger:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 5px;
+}
+header .burger span {
+  display: block;
+  width: 50px;
+  height: 8px;
+  background: #1972de;
+  border-radius: 5px;
+}
+header .burger span:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  width: 270px;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-right: 2px solid #4f4c4e;
+  background: rgba(33, 30, 33, 0.9411764706);
+  font-size: 16px;
+  font-weight: 600;
+}
+aside .wrapper {
+  margin-bottom: 30px;
+}
+aside .wrapper div {
+  padding: 15px 0;
+}
+aside .wrapper div:not(:last-of-type) {
+  border-bottom: 2px solid #4f4c4e;
+}
+aside nav {
+  text-align: start;
+}
+
+.feedback {
+  height: 90px;
+  text-align: center;
+  background: rgba(33, 30, 33, 0.9294117647);
+  border-top-left-radius: 1rem;
+  border-bottom: 2px solid #4f4c4e;
+}
+
+.main-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  background: rgba(33, 30, 33, 0.9411764706);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.statistic {
+  padding-top: 5px;
+  height: 50px;
+  border-top-right-radius: 1rem;
+  border-bottom: 2px solid #4f4c4e;
+}
+.statistic img {
+  margin: 0 20px 0 10px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.navigation {
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 0.3;
+  border-bottom: 2px solid #4f4c4e;
+}
+
+main {
+  flex-grow: 1;
+  border-bottom: 2px solid #4f4c4e;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 65px;
+  font-size: 14px;
+  font-weight: 700;
+}
+footer .wrapper__phone-system img {
+  width: 20px;
+}
+footer .wrapper__phone-system img:not(:last-child) {
+  margin-right: 25px;
+}
+footer .wrapper__card-system {
+  padding: 0 10px;
+  height: 30px;
+}
+footer .wrapper__card-system img {
+  height: 100%;
+}
+footer .wrapper__card-system img:not(:last-child) {
+  padding-right: 15px;
+}
+footer .flag {
+  width: 25px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1470px) {
+  .feedback {
+    height: 100px;
+  }
+  .navigation {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body {
+    grid-template-columns: 0px 1fr;
+  }
+  header > a {
+    margin-left: 25px;
+  }
+  header .burger {
+    display: block;
+    margin-right: 25px;
+  }
+  .feedback, aside {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .statistic {
+    border-top-left-radius: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    display: grid;
+    grid-template: "head head" 70px "feedback statistic" 50px "aside main" 1fr "aside footer" 65px/0px 1fr;
+  }
+  .navigation {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
