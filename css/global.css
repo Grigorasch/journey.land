@@ -123,6 +123,10 @@ aside nav {
   text-align: start;
 }
 
+.content-wrapper {
+  display: flex;
+}
+
 .feedback {
   height: 90px;
   text-align: center;
@@ -261,23 +265,19 @@ a:hover {
     width: 0;
     overflow: hidden;
     background: rgba(33, 30, 33, 0);
-    border-color: rgba(79, 76, 78, 0);
-    transition: width 0.3s, border cubic-bezier(0, 0.97, 0, 0.98) 0.3s, background cubic-bezier(0, 0.97, 0, 0.98) 0.3s;
+    border: none;
+    transition: width 0.3s, background cubic-bezier(0, 0.97, 0, 0.98) 0.3s;
   }
   .main-wrapper {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
   }
 }
-@media screen and (max-width: 720px) {
-  body {
-    display: grid;
-    grid-template: "head head" 70px "feedback statistic" 50px "aside main" 1fr "aside footer" 65px/0px 1fr;
+@media screen and (max-width: 450px) {
+  header > a {
+    margin-left: 0;
   }
-  .navigation {
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    overflow: hidden;
+  header .burger {
+    margin-right: 0;
   }
 }

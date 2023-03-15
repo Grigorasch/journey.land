@@ -139,6 +139,10 @@ aside {
     }
 }
 
+.content-wrapper {
+    display: flex;
+}
+
 .feedback {
     height: 90px;
     text-align: center;
@@ -305,8 +309,9 @@ a {
         width: 0;
         overflow: hidden;
         background: #211e2100;
-        border-color: #4f4c4e00;
-        transition: width 0.3s, border cubic-bezier(0, 0.97, 0, 0.98) 0.3s, background cubic-bezier(0, 0.97, 0, 0.98) 0.3s;
+        // border-color: #4f4c4e00;
+        border: none;
+        transition: width 0.3s, background cubic-bezier(0, 0.97, 0, 0.98) 0.3s;
     }
 
     .main-wrapper {
@@ -315,24 +320,20 @@ a {
     }
 }
 
-@media screen and (max-width: 720px) {
 
-}
 
-@media screen and (max-width: 720px) {
-    body {
-        display: grid;
-        grid-template:  "head head" 70px
-                        "feedback statistic" 50px
-                        // "feedback navigation" 20px
-                        "aside main" 1fr
-                        "aside footer" 65px / 0px  1fr;
-    }
 
-    .navigation {
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-        overflow: hidden;
+
+
+
+
+@media screen and (max-width: 450px) {
+    header {
+        & > a {
+            margin-left: 0;
+        }
+        & .burger {
+            margin-right: 0;
+        }
     }
 }
