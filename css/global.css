@@ -95,7 +95,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   width: 270px;
   min-height: calc(100vh - 80px);
   text-align: center;
