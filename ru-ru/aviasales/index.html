@@ -7,18 +7,26 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/lists.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <title>Главная | AIR UP</title>
 </head>
 <body>
+    <dialog id="fed">
+        <form action="">
+            <input type="text"><input type="text"><input type="text">
+        </form>
+    </dialog>
+
     <header>
         <a href="/"><img src="/images/logo.png" alt="Air Up" class="logo"></a>
         <div class="wrapper">
-            <ul class="link-list link-list__logo_color_black social">
-                <li><a href="#"><img src="/images/lists/social/vk.svg" alt="" class="link-list__icon">Вконтакте</a></li>
-                <li><a href="#"><img src="/images/lists/social/facebook.svg" alt="" class="link-list__icon">Фейсбук</a></li>
-                <li><a href="#"><img src="/images/lists/social/instagram.svg" alt="" class="link-list__icon">Инстаграм</a></li>
-                <li><a href="#"><img src="/images/lists/social/twitter.svg" alt="" class="link-list__icon">Твитер</a></li>
-                <li><a href="#"><img src="/images/lists/social/telegram.svg" alt="" class="link-list__icon">Телеграм</a></li>
+            <ul class="social-list" id="social-list">
+                <li><a href="javascript:void(0)" id="social">Мы в соцсетях</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/vk.svg" alt="">Вконтакте</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/facebook.svg" alt="">Фейсбук</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/instagram.svg" alt="">Инстаграм</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/twitter.svg" alt="">Твитер</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/telegram.svg" alt="">Телеграм</a></li>
             </ul>
         </div>
         <button class="burger" id="burger-button">
@@ -28,111 +36,116 @@
         </button>
     </header>
 
-    <aside>
-        <div class="feedback" id="feedback">
-            <button id="feedback-button" class="button position_center">Написать</button>
-        </div>
-
-        <div class="wrapper">
-            <div>
-                <img src="/images/lists/tripinsurance.png" alt="" class="link-list__logo link-list__logo_color_purple">
+    <div class="content-wrapper">
+        <aside id="aside">
+            <div class="feedback" id="feedback">
+                <button id="feedback-button" class="button position_center" onclick="document.getElementById('fed').showModal()">Написать</button>
+            </div>
+    
+            <div class="wrapper">
+                <div>
+                    <img src="/images/lists/tripinsurance.png" alt="" class="link-list__logo link-list__logo_color_purple">
+                    <ul class="link-list link-list_aside-list">
+                        <li>
+                            <a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=21.04.2016&To=27.04.2016&Days=7&Country=0&Territory=0&Sport=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Страхование для Шенгена</a>
+                        </li>
+                        <li>
+                            <a href="/ru-ru/tripinsurance/russia/">Страхование в России</a>
+                        </li>
+                        <li>
+                            <a href="#">Страховка в страны</a>
+                        </li>
+                        <li>
+                            <a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=01.08.2014&To=07.08.2014&Days=7&Country=0&Territory=23&Sport=True&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=27&selectedSlot=3&specialOffer=true&fullModule=true&partnerId=3267">Горнолыжная страховка</a>
+                        </li>
+                        <li>
+                            <a href="https://fm.tripinsurance.ru/Home/Details?Product=3&From=01.01.2014&Days=365&Country=0&Territory=23&Sport=False&ProSport=False&DangerWork=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Годовая страховка</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <img src="/images/lists/aviasales.png" alt="" class="link-list__logo link-list__logo_color_black">
+                    <ul class="link-list link-list_aside-list">
+                        <li>
+                            <a href="/ru-ru/aviasales/">Поиск авиабилетов и бронирование отелей</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <a href="/ru-ru/mapsme/" class="link-list__logo link-list__logo_mapsme">
+                        <img src="/images/lists/mapsme.png" alt="">
+                    </a>
+    
+                    <ul class="link-list link-list_aside-list">
+                        <li>Банковская карта</li>
+                        <li>eSim</li>
+                        <li><img src="/images/lists/apple-walletsvg.svg" alt="" width="25px" style="vertical-align: middle;"> <span style="white-space: pre-line;">Поддерживается
+                            Wallet</span></li>
+                        <li style="white-space: pre-line;">
+                            Для пополнения 
+                            используйте BINANCE
+                            <img src="/images/lists/mapsme/binance-referral.png" alt="" class="link-list__logo_binance">
+                            <a href="https://accounts.binance.me/ru/register?ref=399335636">https://accounts.binance.me/ru/register?ref=399335636</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <nav class="aside__wrapper_navigation">
                 <ul class="link-list link-list_aside-list">
-                    <li>
-                        <a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=21.04.2016&To=27.04.2016&Days=7&Country=0&Territory=0&Sport=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Страхование для Шенгена</a>
-                    </li>
-                    <li>
-                        <a href="/ru-ru/tripinsurance/russia/">Страхование в России</a>
-                    </li>
-                    <li>
-                        <a href="#">Страховка в страны</a>
-                    </li>
-                    <li>
-                        <a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=01.08.2014&To=07.08.2014&Days=7&Country=0&Territory=23&Sport=True&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=27&selectedSlot=3&specialOffer=true&fullModule=true&partnerId=3267">Горнолыжная страховка</a>
-                    </li>
-                    <li>
-                        <a href="https://fm.tripinsurance.ru/Home/Details?Product=3&From=01.01.2014&Days=365&Country=0&Territory=23&Sport=False&ProSport=False&DangerWork=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Годовая страховка</a>
-                    </li>
+                    <li><a href="#">Информационный центр</a></li>
+                    <li></li>
+                    <li><a href="#">Страховой случай</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">О нас</a></li>
                 </ul>
-            </div>
+            </nav>
+        </aside>
     
-            <div>
-                <img src="/images/lists/aviasales.png" alt="" class="link-list__logo link-list__logo_color_black">
-                <ul class="link-list link-list_aside-list">
-                    <li>
-                        <a href="/ru-ru/aviasales/">Поиск авиабилетов и бронирование отелей</a>
-                    </li>
-                </ul>
+        <div class="main-wrapper" id="main-wrapper">
+            <div class="statistic" id="statistic">
+                <img src="/images/icons/heart.png" alt="">
+                <span>Куплено полисов и авиабилетов: 2 294 227</span>
             </div>
-
-            <div>
-                <a href="/ru-ru/mapsme/" class="link-list__logo link-list__logo_mapsme">
-                    <img src="/images/lists/mapsme.png" alt="">
-                </a>
-
-                <ul class="link-list link-list_aside-list">
-                    <li>Банковская карта</li>
-                    <li>eSim</li>
-                    <li><img src="/images/lists/apple-walletsvg.svg" alt="" width="25px" style="vertical-align: middle;"> <span style="white-space: pre-line;">Поддерживается
-                        Wallet</span></li>
-                    <li style="white-space: pre-line;">
-                        Для пополнения 
-                        используйте BINANCE
-                        <img src="/images/lists/mapsme/binance-referral.png" alt="" class="link-list__logo_binance">
-                        <a href="https://accounts.binance.me/ru/register?ref=399335636">https://accounts.binance.me/ru/register?ref=399335636</a>
-                    </li>
+        
+            <nav class="navigation" id="navigation">
+                <ul class="link-list position_center" id="navigation-list">
+                    <li><a href="/ru-ru/aviasales/"><img src="/images/lists/general/plane-ticket.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Поиск авиабилетов и бронирование отелей</span></a></li>
+                    <li><a href="/ru-ru/tripinsurance/"><img src="/images/lists/general/calculating.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Рассчитайте онлайн стоимость полиса</span></a></li>
+                    <li><a href="#"><img src="/images/lists/general/list.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Введите данные о вашей поездке</span></a></li>
+                    <li><a href="#"><img src="/images/lists/general/printing.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Получите полис, авиабилет и бронь в отели на e-mail</span></a></li>
                 </ul>
-            </div>
+                <button id="navigation-button"></button>
+            </nav>
+        
+            <main id="main">
+        
+            </main>
+    
+            <footer id="footer">
+                <div class="wrapper__phone-system">
+                    <img src="/images/icons/android.svg" alt="Android">
+                    <img src="/images/icons/apple.svg" alt="Apple">
+                </div>
+                <div class="wrapper__card-system" aria-label="Мы принимаем платежи по">
+                    <img src="/images/icons/visa.png" alt="VISA">
+                    <img src="/images/icons/mastercard.svg" alt="MasterCard">
+                    <img src="/images/icons/mir.png" alt="МИР">
+                </div>
+                <a href="#">Журнал</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Справка и Поддержка</a>
+                <span>© 2001-2023</span>
+                <a href="#"><img src="/images/icons/flag-rus.svg" alt="" class="flag"></a>
+            </footer>
         </div>
-
-        <nav class="aside__wrapper_navigation">
-            <ul class="link-list link-list_aside-list">
-                <li><a href="#">Информационный центр</a></li>
-                <li></li>
-                <li><a href="#">Страховой случай</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">О нас</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <div class="main-wrapper">
-        <div class="statistic" id="statistic">
-            <img src="/images/icons/heart.png" alt="">
-            Куплено полисов и авиабилетов: 2 294 227
-        </div>
-    
-        <nav class="navigation" id="navigation">
-            <ul class="link-list position_center">
-                <li><a href="/ru-ru/aviasales/"><img src="/images/lists/general/plane-ticket.svg" alt="" class="link-list__icon link-list__icon_size_m">Поиск авиабилетов и бронирование отелей</a></li>
-                <li><a href="/ru-ru/tripinsurance/"><img src="/images/lists/general/calculating.svg" alt="" class="link-list__icon link-list__icon_size_m">Рассчитайте онлайн стоимость полиса</a></li>
-                <li><a href="#"><img src="/images/lists/general/list.svg" alt="" class="link-list__icon link-list__icon_size_m">Введите данные о вашей поездке</a></li>
-                <li><a href="#"><img src="/images/lists/general/printing.svg" alt="" class="link-list__icon link-list__icon_size_m">Получите полис, авиабилет и бронь в отели на e-mail</a></li>
-            </ul>
-        </nav>
-    
-        <main>
-    
-        </main>
-
-        <footer>
-            <div class="wrapper__phone-system">
-                <img src="/images/icons/android.svg" alt="Android">
-                <img src="/images/icons/apple.svg" alt="Apple">
-            </div>
-            <div class="wrapper__card-system" aria-label="Мы принимаем платежи по">
-                <img src="/images/icons/visa.png" alt="VISA">
-                <img src="/images/icons/mastercard.svg" alt="MasterCard">
-                <img src="/images/icons/mir.png" alt="МИР">
-            </div>
-            <a href="#">Журнал</a>
-            <a href="#">Вакансии</a>
-            <a href="#">Справка и Поддержка</a>
-            <span>© 2001-2023</span>
-            <a href="#"><img src="/images/icons/flag-rus.svg" alt="" class="flag"></a>
-        </footer>
     </div>
 
     <script src="/scripts/burger.js"></script>
+    <script src="/scripts/socialList.js"></script>
+    <script src="/scripts/navigationList.js"></script>
 </body> 
 </html>
