@@ -120,7 +120,6 @@ aside {
     font-size: 16px;
     font-weight: 600;
     transition:  0.3s;
-    // transition: width 0.3s, border cubic-bezier(1, 0.03, 1, 0.03) 0.4s, background cubic-bezier(1, 0.03, 1, 0.03) 0.4s;
 
     & .link-list {
         width: 270px;
@@ -201,7 +200,6 @@ aside {
 
     & span {
         display: inline-block;
-        // width: 220px;
         width: 80%;
         font-size: 14px;
         font-weight: 700;
@@ -359,11 +357,7 @@ a {
     aside {
         width: 0;
         overflow: hidden;
-        // background: #211e2100;
         opacity: 0;
-        // border-color: #4f4c4e00;
-        // border: none;
-        // transition: width 0.3s, background cubic-bezier(0, 0.97, 0, 0.98) 0.3s;
     }
 
     .main-wrapper {
