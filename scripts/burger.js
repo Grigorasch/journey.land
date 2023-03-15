@@ -1,27 +1,44 @@
 let burgerState = false;
 let burgerButton = document.getElementById('burger-button');
-let bodyDocument = document.getElementsByTagName('body')[0];
-let feedbackDocument = document.getElementById('feedback');
-let statisticDocument = document.getElementById('statistic');
-let navigationDocument = document.getElementById('navigation');
+let asideMenu = document.getElementById('aside');
+let mainWrapper = document.getElementById('main-wrapper');
+let statistic = document.getElementById('statistic');
+let navigation = document.getElementById('navigation');
+let main = document.getElementById('main');
+let footer = document.getElementById('footer');
 
 burgerButton.addEventListener('click', e => {
     if (burgerState) {
-        // bodyDocument.style='grid-template-columns: 0px 1fr;';
         burgerClose();
     } else {
-        // bodyDocument.style='grid-template-columns: 270px 1fr;';
         burgerOpen();
     }
     burgerState = !burgerState;
-})
+});
+
+window.addEventListener('resize', e => {
+    if (e.target.innerWidth >= 1100 && burgerState) {
+        burgerClose();
+        burgerState = !burgerState;
+    }
+});
 
 function burgerOpen() {
-    bodyDocument.style = 'grid-template-columns: 270px 1fr;';
-    feedbackDocument.style = 'width: 100%; height: 100%; overflow: visible; opacity: 1;'
+    let blockWidth = window.innerWidth - 22;
+
+    asideMenu.style = 'width: 270px; opacity: 1;';
+    mainWrapper.style = 'border-top-left-radius: 0; border-bottom-left-radius: 0;'
+    statistic.style = `width: ${blockWidth}px`
+    navigation.style.width = `${blockWidth}px`
+    main.style = `width: ${blockWidth}px`
+    footer.style = `width: ${blockWidth}px`
 }
 
 function burgerClose() {
-    bodyDocument.removeAttribute('style');
-    feedbackDocument.removeAttribute('style');
+    asideMenu.removeAttribute('style');
+    mainWrapper.removeAttribute('style');
+    statistic.removeAttribute('style');
+    navigation.style.width = '';
+    main.removeAttribute('style');
+    footer.removeAttribute('style');
 }

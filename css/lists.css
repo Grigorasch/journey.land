@@ -58,14 +58,16 @@
   color: #FFFFFF;
 }
 .link-list__logo {
-  width: 60%;
+  width: 160px;
   margin-bottom: 1em;
   padding: 0.3em 0.5em;
   border-radius: 3px;
 }
 .link-list__logo_mapsme img {
   margin-bottom: 10px;
-  height: 70px;
+  padding-left: 46px;
+  padding-right: 54px;
+  width: 260px;
 }
 .link-list__logo_mapsme span {
   white-space: pre-line;
@@ -103,9 +105,11 @@
   gap: 0.9em;
 }
 .link-list__logo_color_purple {
+  margin: 0 54px;
   background: #7358e5;
 }
 .link-list__logo_color_black {
+  margin: 0 54px;
   background: #000000;
 }
 .link-list__logo_size_mapsme {

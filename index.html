@@ -7,19 +7,26 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/lists.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <title>Главная | AIR UP</title>
 </head>
 <body>
+    <dialog id="fed">
+        <form action="">
+            <input type="text"><input type="text"><input type="text">
+        </form>
+    </dialog>
+
     <header>
         <a href="/"><img src="/images/logo.png" alt="Air Up" class="logo"></a>
         <div class="wrapper">
             <ul class="social-list" id="social-list">
                 <li><a href="javascript:void(0)" id="social">Мы в соцсетях</a></li>
-                <li><a href="#"><img src="/images/lists/social/vk.svg" alt="">Вконтакте</a></li>
-                <li><a href="#"><img src="/images/lists/social/facebook.svg" alt="">Фейсбук</a></li>
-                <li><a href="#"><img src="/images/lists/social/instagram.svg" alt="">Инстаграм</a></li>
-                <li><a href="#"><img src="/images/lists/social/twitter.svg" alt="">Твитер</a></li>
-                <li><a href="#"><img src="/images/lists/social/telegram.svg" alt="">Телеграм</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/vk.svg" alt="">Вконтакте</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/facebook.svg" alt="">Фейсбук</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/instagram.svg" alt="">Инстаграм</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/twitter.svg" alt="">Твитер</a></li>
+                <li><a href="#" target="_blank"><img src="/images/lists/social/telegram.svg" alt="">Телеграм</a></li>
             </ul>
         </div>
         <button class="burger" id="burger-button">
@@ -30,9 +37,9 @@
     </header>
 
     <div class="content-wrapper">
-        <aside>
+        <aside id="aside">
             <div class="feedback" id="feedback">
-                <button id="feedback-button" class="button position_center">Написать</button>
+                <button id="feedback-button" class="button position_center" onclick="document.getElementById('fed').showModal()">Написать</button>
             </div>
     
             <div class="wrapper">
@@ -98,26 +105,27 @@
             </nav>
         </aside>
     
-        <div class="main-wrapper">
+        <div class="main-wrapper" id="main-wrapper">
             <div class="statistic" id="statistic">
                 <img src="/images/icons/heart.png" alt="">
-                Куплено полисов и авиабилетов: 2 294 227
+                <span>Куплено полисов и авиабилетов: 2 294 227</span>
             </div>
         
             <nav class="navigation" id="navigation">
-                <ul class="link-list position_center">
-                    <li><a href="/ru-ru/aviasales/"><img src="/images/lists/general/plane-ticket.svg" alt="" class="link-list__icon link-list__icon_size_m">Поиск авиабилетов и бронирование отелей</a></li>
-                    <li><a href="/ru-ru/tripinsurance/"><img src="/images/lists/general/calculating.svg" alt="" class="link-list__icon link-list__icon_size_m">Рассчитайте онлайн стоимость полиса</a></li>
-                    <li><a href="#"><img src="/images/lists/general/list.svg" alt="" class="link-list__icon link-list__icon_size_m">Введите данные о вашей поездке</a></li>
-                    <li><a href="#"><img src="/images/lists/general/printing.svg" alt="" class="link-list__icon link-list__icon_size_m">Получите полис, авиабилет и бронь в отели на e-mail</a></li>
+                <ul class="link-list position_center" id="navigation-list">
+                    <li><a href="/ru-ru/aviasales/"><img src="/images/lists/general/plane-ticket.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Поиск авиабилетов и бронирование отелей</span></a></li>
+                    <li><a href="/ru-ru/tripinsurance/"><img src="/images/lists/general/calculating.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Рассчитайте онлайн стоимость полиса</span></a></li>
+                    <li><a href="#"><img src="/images/lists/general/list.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Введите данные о вашей поездке</span></a></li>
+                    <li><a href="#"><img src="/images/lists/general/printing.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Получите полис, авиабилет и бронь в отели на e-mail</span></a></li>
                 </ul>
+                <button id="navigation-button"></button>
             </nav>
         
-            <main>
+            <main id="main">
         
             </main>
     
-            <footer>
+            <footer id="footer">
                 <div class="wrapper__phone-system">
                     <img src="/images/icons/android.svg" alt="Android">
                     <img src="/images/icons/apple.svg" alt="Apple">
@@ -138,5 +146,6 @@
 
     <script src="/scripts/burger.js"></script>
     <script src="/scripts/socialList.js"></script>
+    <script src="/scripts/navigationList.js"></script>
 </body> 
 </html>

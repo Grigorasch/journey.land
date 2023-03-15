@@ -79,7 +79,7 @@
     color: #FFFFFF;
 
     &__logo {
-        width: 60%;
+        width: 160px;
         margin-bottom: 1em;
         padding: 0.3em 0.5em;
         border-radius: 3px;
@@ -88,7 +88,9 @@
 
             & img {
                 margin-bottom: 10px;
-                height: 70px;
+                padding-left: 46px;
+                padding-right: 54px;
+                width: 260px;
             }
             & span {
                 white-space: pre-line;
@@ -136,10 +138,12 @@
     &__logo {
         &_color {
             &_purple {
+                margin: 0 54px;
                 background: #7358e5;
             }
 
             &_black {
+                margin: 0 54px;
                 background: #000000;
             }
         }
