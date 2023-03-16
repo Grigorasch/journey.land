@@ -81,6 +81,10 @@
   display: inline-block;
   transform-origin: left;
 }
+.link-list__logo_level-travel {
+  padding: 0 54px;
+  width: 268px;
+}
 .link-list__logo_binance {
   width: 150px;
 }

@@ -1,0 +1,41 @@
+"горячие туры" 
+
+<script src="https://tp.media/content?trs=210401&shmarker=411135&origin_iata=MOW&destination_iata=AE&currency=rub&locale=ru&min_lines=4&promo_id=4097&campaign_id=26" charset="utf-8"></script>
+
+----------------------------------------------------------------
+
+"Календарь лучших цен"
+
+<script src="https://c26.travelpayouts.com/content?trs=210401&shmarker=411135&city_from=Moscow&year=&month=&powered_by=true&title=%D0%9B%D1%83%D1%87%D1%88%D0%B8%D0%B5%20%D1%86%D0%B5%D0%BD%D1%8B%20%D0%BD%D0%B0%20%D1%82%D1%83%D1%80%D1%8B&popular=%22true%22&promo_id=1151" charset="utf-8"></script>
+
+-----------------------------------------------------------------
+
+"Статистика цен"
+
+<script src="https://c26.travelpayouts.com/content?trs=210401&shmarker=411135&from_city=Moscow&nights=2&adults=2&powered_by=true&stars_from=1&stars_to=5&flex_dates=%22true%22&flex_nights=true&countries_list=%22true%22&departures=%22true%22&shown_nights=%22true%22&graph_label=%22true%22&week_labels=%22true%22&month_labels=%22true%22&months_switcher=%22true%22&tooltip=%22true%22&best_price=%22true%22&lines=%22true%22&medium_line=%22true%22&full_month=%22true%22&background=false&minimal=%22true%22&focus_target=true&promo_id=1495" charset="utf-8"></script>
+
+------------------------------------------------------------------
+
+"Поиск туров"
+
+<script src="https://tp.media/content?trs=210401&shmarker=411135&locale=ru&origin=ru&border_radius=30&plain=true&color_background=%23f3f3f3&color_border=%23FFFFFFff&color_button=%23ffce00&promo_id=5470&campaign_id=26" charset="utf-8"></script>
+
+--------------------------------------------------------------------
+
+"Поиск по отеля"
+
+<script src="https://tp.media/content?trs=210401&shmarker=411135&locale=ru&border_radius=30&plain=true&color_background=%23f3f3f3&color_border=%23FFFFFFff&color_button=%23ffce00&promo_id=8003&campaign_id=26" charset="utf-8"></script>
+
+-------------------------------------------------------------------
+
+"Главная"
+
+<script src="https://c26.travelpayouts.com/content?trs=210401&shmarker=411135&departure=Moscow&destination=205%2C10097%2C10098%2C210%2C995%2C983&start_date=WEEK&nights=4..6&adults=2&kids=0&redirect=_blank&powered_by=true&promo_id=8286" charset="utf-8"></script>
+
+
+<script src="https://c26.travelpayouts.com/content?trs=210401&shmarker=411135&city=%D0%90%D0%B4%D0%BB%D0%B5%D1%80&adults=0&scroll=false&powered_by=true&promo_id=1494" charset="utf-8"></script>
+
+<script src="https://c26.travelpayouts.com/content?trs=210401&shmarker=411135&hotel=https%3A%2F%2Flevel.travel%2Fhotels%2F9073883-Kleopatra_Bebek&type=package&departure=Moscow&start_date=WEEK&nights=8&adults=2&kids=0&redirect=_blank&powered_by=true&promo_id=8295" charset="utf-8"></script>
+
+<script src="https://c26.travelpayouts.com/content?trs=210401&shmarker=411135&package=https%3A%2F%2Flevel.travel%2Fpackages%2F311145086&redirect=_blank&powered_by=true&promo_id=8294" charset="utf-8"></script>
+

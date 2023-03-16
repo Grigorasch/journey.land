@@ -55,21 +55,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .link-list {
     display: flex;
     justify-content: space-between;
@@ -105,6 +90,12 @@
                 }
             }
         }
+
+        &_level-travel {
+            padding: 0 54px;
+            width: 268px;
+        }
+        
         &_binance {
             width: 150px;
             & + a {

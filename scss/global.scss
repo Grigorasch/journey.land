@@ -258,6 +258,12 @@ footer {
                 }
             }
         }
+
+        &__links {
+            display: flex;
+            justify-content: space-between;
+            width: 55%;
+        }
     }
 
     & .flag {
@@ -366,6 +372,17 @@ a {
     }
 }
 
+@media screen and (max-width: 850px) {
+    footer {
+        flex-wrap: wrap;
+        height: 90px;
+
+        & .wrapper__links {
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     a {
         &:hover {
@@ -415,6 +432,47 @@ a {
     
             &::after {
                 transform: rotate(-135deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        height: 90px;
+        padding-bottom: 5px;
+
+        & .wrapper {
+            &__phone-system {
+                & img {
+                    width: 15px;
+    
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+    
+            &__card-system {
+                height: 20px;
+    
+                & img {
+                    height: 100%;
+                    
+                    &:not(:last-child) {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+
+        & .wrapper__links {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            font-size: 12px;
+
+            & span {
+                flex-basis: 200px;
             }
         }
     }
