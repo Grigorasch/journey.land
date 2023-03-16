@@ -33,7 +33,7 @@
     line-height: 25px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 690px) {
   .social-list {
     align-items: flex-start;
     line-height: 50px;
