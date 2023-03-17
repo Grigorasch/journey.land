@@ -93,6 +93,10 @@ header .burger span:not(:last-child) {
   display: flex;
 }
 
+.fillable {
+  flex-grow: 1;
+}
+
 aside {
   flex-shrink: 0;
   display: flex;
