@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,38 @@
     <link rel="stylesheet" href="/css/lists.css">
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <title>Главная | AIR UP</title>
+    <style>
+        .pp {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .oo {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
+
 <body>
+    <script>
+        let diu
+        let but
+        document.addEventListener('DOMContentLoaded', () => {
+            diu = document.getElementById('pp')
+            but = document.getElementById('oo')
+            diu.addEventListener('click', () => { console.log('diu') })
+            but.addEventListener('click', (e) => { 
+                e.stopPropagation();
+                console.log('but') }, true)
+        })
+
+    </script>
+    <div class="pp" id="pp">
+        <button class="oo" id="oo"></button>
+    </div>
     <dialog id="fed">
         <form action="">
             <input type="text"><input type="text"><input type="text">
@@ -39,12 +70,14 @@
     <div class="content-wrapper">
         <aside id="aside">
             <div class="feedback" id="feedback">
-                <button id="feedback-button" class="button position_center" onclick="document.getElementById('fed').showModal()">Написать</button>
+                <button id="feedback-button" class="button position_center"
+                    onclick="document.getElementById('fed').showModal()">Написать</button>
             </div>
-    
+
             <div class="wrapper">
                 <div>
-                    <img src="/images/lists/level-travel.png" alt="" class="link-list__logo link-list__logo_level-travel">
+                    <img src="/images/lists/level-travel.png" alt=""
+                        class="link-list__logo link-list__logo_level-travel">
                     <ul class="link-list link-list_aside-list">
                         <li><a href="/ru-ru/leveltravel/hot/">Горящие туры</a></li>
                         <li><a href="/ru-ru/leveltravel/calendar/">Календарь лучших цен</a></li>
@@ -56,10 +89,13 @@
                 </div>
 
                 <div>
-                    <img src="/images/lists/tripinsurance.png" alt="" class="link-list__logo link-list__logo_color_purple">
+                    <img src="/images/lists/tripinsurance.png" alt=""
+                        class="link-list__logo link-list__logo_color_purple">
                     <ul class="link-list link-list_aside-list">
                         <li>
-                            <a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=21.04.2016&To=27.04.2016&Days=7&Country=0&Territory=0&Sport=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Страхование для Шенгена</a>
+                            <a
+                                href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=21.04.2016&To=27.04.2016&Days=7&Country=0&Territory=0&Sport=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Страхование
+                                для Шенгена</a>
                         </li>
                         <li>
                             <a href="/ru-ru/tripinsurance/russia/">Страхование в России</a>
@@ -68,14 +104,18 @@
                             <a href="#">Страховка в страны</a>
                         </li>
                         <li>
-                            <a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=01.08.2014&To=07.08.2014&Days=7&Country=0&Territory=23&Sport=True&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=27&selectedSlot=3&specialOffer=true&fullModule=true&partnerId=3267">Горнолыжная страховка</a>
+                            <a
+                                href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=01.08.2014&To=07.08.2014&Days=7&Country=0&Territory=23&Sport=True&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=27&selectedSlot=3&specialOffer=true&fullModule=true&partnerId=3267">Горнолыжная
+                                страховка</a>
                         </li>
                         <li>
-                            <a href="https://fm.tripinsurance.ru/Home/Details?Product=3&From=01.01.2014&Days=365&Country=0&Territory=23&Sport=False&ProSport=False&DangerWork=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Годовая страховка</a>
+                            <a
+                                href="https://fm.tripinsurance.ru/Home/Details?Product=3&From=01.01.2014&Days=365&Country=0&Territory=23&Sport=False&ProSport=False&DangerWork=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">Годовая
+                                страховка</a>
                         </li>
                     </ul>
                 </div>
-        
+
                 <div>
                     <img src="/images/lists/aviasales.png" alt="" class="link-list__logo link-list__logo_color_black">
                     <ul class="link-list link-list_aside-list">
@@ -84,29 +124,31 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div>
                     <a href="/ru-ru/mapsme/" class="link-list__logo link-list__logo_mapsme">
                         <img src="/images/lists/mapsme.png" alt="">
                     </a>
-    
+
                     <ul class="link-list link-list_aside-list">
                         <li>Банковская карта</li>
                         <li>eSim</li>
-                        <li><img src="/images/lists/apple-walletsvg.svg" alt="" width="25px" style="vertical-align: middle;"> <span style="white-space: pre-line;">Поддерживается
-                            Wallet</span></li>
+                        <li><img src="/images/lists/apple-walletsvg.svg" alt="" width="25px"
+                                style="vertical-align: middle;"> <span style="white-space: pre-line;">Поддерживается
+                                Wallet</span></li>
                         <li style="white-space: pre-line;">
-                            Для пополнения 
+                            Для пополнения
                             используйте BINANCE
                             <img src="/images/lists/mapsme/binance-referral.png" alt="" class="link-list__logo_binance">
-                            <a href="https://accounts.binance.me/ru/register?ref=399335636" target="_blank">https://accounts.binance.me/ru/register?ref=399335636</a>
+                            <a href="https://accounts.binance.me/ru/register?ref=399335636"
+                                target="_blank">https://accounts.binance.me/ru/register?ref=399335636</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="fillable"></div>
-    
+
             <nav class="aside__wrapper_navigation">
                 <ul class="link-list link-list_aside-list">
                     <li><a href="/ru-ru/company/information/">Информационный центр</a></li>
@@ -118,27 +160,35 @@
                 </ul>
             </nav>
         </aside>
-    
+
         <div class="main-wrapper" id="main-wrapper">
             <div class="statistic" id="statistic">
                 <img src="/images/icons/heart.png" alt="">
                 <span>Куплено полисов и авиабилетов: 2 294 227</span>
             </div>
-        
+
             <nav class="navigation" id="navigation">
                 <ul class="link-list position_center" id="navigation-list">
-                    <li><a href="/ru-ru/aviasales/"><img src="/images/lists/general/plane-ticket.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Поиск авиабилетов и бронирование отелей</span></a></li>
-                    <li><a href="/ru-ru/tripinsurance/"><img src="/images/lists/general/calculating.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Рассчитайте онлайн стоимость полиса</span></a></li>
-                    <li><a href="/ru-ru/information/"><img src="/images/lists/general/list.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Введите данные о вашей поездке</span></a></li>
-                    <li><a href="/ru-ru/documentation/"><img src="/images/lists/general/printing.svg" alt="" class="link-list__icon link-list__icon_size_m"><span>Получите полис, авиабилет и бронь в отели на e-mail</span></a></li>
+                    <li><a href="/ru-ru/aviasales/"><img src="/images/lists/general/plane-ticket.svg" alt=""
+                                class="link-list__icon link-list__icon_size_m"><span>Поиск авиабилетов и бронирование
+                                отелей</span></a></li>
+                    <li><a href="/ru-ru/tripinsurance/"><img src="/images/lists/general/calculating.svg" alt=""
+                                class="link-list__icon link-list__icon_size_m"><span>Рассчитайте онлайн стоимость
+                                полиса</span></a></li>
+                    <li><a href="/ru-ru/information/"><img src="/images/lists/general/list.svg" alt=""
+                                class="link-list__icon link-list__icon_size_m"><span>Введите данные о вашей
+                                поездке</span></a></li>
+                    <li><a href="/ru-ru/documentation/"><img src="/images/lists/general/printing.svg" alt=""
+                                class="link-list__icon link-list__icon_size_m"><span>Получите полис, авиабилет и бронь в
+                                отели на e-mail</span></a></li>
                 </ul>
                 <button id="navigation-button"></button>
             </nav>
-        
+
             <main id="main">
-        
+
             </main>
-    
+
             <footer id="footer">
                 <div class="wrapper__phone-system">
                     <img src="/images/icons/android.svg" alt="Android">
@@ -163,5 +213,6 @@
     <script src="/scripts/burger.js" id="burger-script"></script>
     <script src="/scripts/socialList.js"></script>
     <script src="/scripts/navigationList.js"></script>
-</body> 
+</body>
+
 </html>

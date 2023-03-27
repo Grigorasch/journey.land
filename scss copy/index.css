@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, p, a,
+img, ul, li, form, label, aside, footer,
+header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+aside, nav {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template: "head head" 170px "aside main" 1fr "aside footer" 65px/250px 1fr;
+  padding: 0 10px 15px;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1;
+  background: url(../images/background.png) top no-repeat;
+  transition: 0.3s;
+}
+
+header {
+  grid-area: head;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1.5fr 1.25fr 1fr;
+  border-bottom: 2px solid #4f4c4e;
+  transition: 0.3s;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-left-radius: 1rem;
+  border-right: 2px solid #4f4c4e;
+  background: rgba(33, 30, 33, 0.9294117647);
+}
+
+main {
+  grid-area: main;
+  border-bottom: 2px solid #4f4c4e;
+  background: rgba(33, 30, 33, 0.9294117647);
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-right-radius: 1rem;
+  background: rgba(33, 30, 33, 0.9294117647);
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+  body, header {
+    grid-template-columns: 200px 1fr;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body, header {
+    grid-template-columns: 0px 1fr;
+  }
+  aside {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  footer {
+    border-bottom-left-radius: 1rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  body {
+    grid-template-rows: 200px 1fr 80px;
+  }
+  footer {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body {
+    grid-template-rows: 230px 1fr 65px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    grid-template-rows: 230px 1fr 100px;
+  }
+}

@@ -1,0 +1,132 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #1972de;
+  transition: width 0.3s, height 0.3s;
+}
+.social-list img {
+  margin-right: 0.4em;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: text-bottom;
+}
+.social-list li:first-child {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .social-list {
+    width: 400px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .social-list {
+    align-items: flex-start;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    width: 150px;
+  }
+  .social-list li:first-child {
+    display: block;
+  }
+  .social-list li:not(:first-child) {
+    display: none;
+  }
+}
+.link-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+.link-list__logo {
+  width: 160px;
+  margin-bottom: 1em;
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+}
+.link-list__logo_mapsme img {
+  margin-bottom: 10px;
+  padding-left: 46px;
+  padding-right: 54px;
+  width: 260px;
+}
+.link-list__logo_mapsme span {
+  white-space: pre-line;
+  text-align: left;
+  margin-right: -36px;
+}
+.link-list__logo_mapsme span span {
+  font-size: 45px;
+  transform: scaleX(0.6);
+  letter-spacing: -2.2px;
+  display: inline-block;
+  transform-origin: left;
+}
+.link-list__logo_level-travel {
+  padding: 0 54px;
+  width: 268px;
+}
+.link-list__logo_binance {
+  width: 150px;
+}
+.link-list__logo_binance + a {
+  word-wrap: break-word;
+  font-size: 12px;
+}
+.link-list__icon {
+  margin-right: 0.4em;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+.link-list__icon_size_m {
+  width: 2em;
+  height: 2em;
+  vertical-align: text-top;
+}
+
+.link-list_aside-list {
+  flex-direction: column;
+  gap: 0.9em;
+}
+.link-list__logo_color_purple {
+  margin: 0 54px;
+  background: #7358e5;
+}
+.link-list__logo_color_black {
+  margin: 0 54px;
+  background: #000000;
+}
+.link-list__logo_size_mapsme {
+  width: 50px;
+}
+.link-list_background_black {
+  background: #1d1e20;
+}
+
+@media screen and (max-width: 720px) {
+  .link-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
+}
