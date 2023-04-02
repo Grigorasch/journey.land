@@ -16,7 +16,7 @@ export default function AviasalesList() {
         <Div>
             <ListImg src='/images/list/aviasales.png' backgroundColor='#000000' />
             <ColumnListLinks>
-                <li><Link to={`/${localStorage.getItem('lang') || lang}/aviasales`}>{links.search}</Link></li>
+                <li><Link to={`/${lang}/aviasales`}>{links.search}</Link></li>
             </ColumnListLinks>
         </Div>
     )
