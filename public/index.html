@@ -16,7 +16,7 @@
   <script>
     window.addEventListener('error', function (e) {
       console.error(e.message);
-      if (e.message.includes("ResizeObserver loop limit exceeded")) {
+      if (e.message.includes("ResizeObserver loop limit exceeded") || e.message.includes("Script error")) {
         e.stopImmediatePropagation();
         e.preventDefault();
       }
