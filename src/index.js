@@ -12,19 +12,9 @@ import reportWebVitals from './reportWebVitals';
 import Main from './Pages/Main';
 import Aviasales from './Pages/Aviasales/indes';
 import Home from './Pages/Home';
+import Tripinsurance from './Pages/Tripinsurance';
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   // element: <Main lang="ru" />,
-  //   loader: () => {
-  //     if (localStorage.getItem('lang')) {
-  //       return redirect(`/${localStorage.getItem('lang')}`)
-  //     } else {
-  //       return redirect('/ru')
-  //     }
-  //   },
-  // },
   {
     path: "/:lang?",
     element: <Main />,
@@ -53,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/:lang/tripinsurance",
-        // element: <Aviasales />
+        element: <Tripinsurance />
       },
     ],
   }

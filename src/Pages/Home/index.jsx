@@ -9,6 +9,7 @@ export default function Home() {
     const textContent = {};
     switch (lang) {
         case 'en':
+            document.title = 'Home Page | Jorney Land';
             textContent.heading = "SEARCH FOR CHEAP AIR TICKETS AND TRAVEL INSURANCE"
             textContent.headingDescription = "An easy way to buy air tickets and a cheap policy, the policy is valid all over the world"
             textContent.formHeading = "Where are you flying?"
@@ -16,6 +17,7 @@ export default function Home() {
             break
         case 'ru':
         default:
+            document.title = 'Главная | Jorney Land';
             textContent.heading = "ПОИСК ДЕШЁВЫХ АВИАБИЛЕТОВ И СТРАХОВАНИЕ ПУТЕШЕСТВЕННИКОВ"
             textContent.headingDescription = "Лёгкий способ купить авиабилеты и полис дёшево, полис действителен во всем мире"
             textContent.formHeading = "Куда летите?"

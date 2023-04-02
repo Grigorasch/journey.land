@@ -10,6 +10,7 @@ export default function Banner() {
             textContent.description = "We know the best places in different cities and will show you everything!"
             textContent.aviasales = "AIRLINE TICKETS AND HOTEL BOOKINGS"
             textContent.tripinsurance = "LIFE INSURANCE"
+            textContent.note = "and don't forget about insurance"
             break
         case 'ru':
         default:
@@ -17,6 +18,7 @@ export default function Banner() {
             textContent.description = "Мы знаем лучшие места в разных городах и покажем вам все!"
             textContent.aviasales = "АВИАБИЛЕТЫ И БРОНИРОВАНИЕ ОТЕЛЕЙ"
             textContent.tripinsurance = "СТРАХОВКА ЖИЗНИ"
+            textContent.note = "и не забудь о страховке"
     }
     return (
         <BannerContainer>
@@ -27,7 +29,7 @@ export default function Banner() {
                 </BannerTextWrapper>
                 <BannerLinksWrapper>
                     <AviasalesLink to={`/${lang}/aviasales`}>{textContent.aviasales}</AviasalesLink>
-                    <BannerLinksNote>и нс забудь о страховке</BannerLinksNote>
+                    <BannerLinksNote>{textContent.note}</BannerLinksNote>
                     <TripinsuranceLink to={`/${lang}/tripinsurance`}>{textContent.tripinsurance}</TripinsuranceLink>
                 </BannerLinksWrapper>
             </BannerWrapper>
