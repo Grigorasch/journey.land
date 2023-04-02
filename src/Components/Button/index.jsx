@@ -1,8 +1,18 @@
 import styled from "styled-components"
 
 export function FeedbackButton() {
+    const lang = localStorage.getItem('lang');
+    let label;
+    switch (lang) {
+        case 'en':
+            label = "Feedback"
+            break
+        case 'ru':
+        default:
+            label = "Написать"
+    }
     return (
-        <Feedback>Написать</Feedback>
+        <Feedback>{label}</Feedback>
     )
 }
 

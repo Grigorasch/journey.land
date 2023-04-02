@@ -8,6 +8,7 @@ import LevelTravelList from "../List/LevelTravelList";
 
 
 export default function PageAside() {
+    const lang = localStorage.getItem('lang');
     return (
         <Aside>
             <ButtonWrapper>

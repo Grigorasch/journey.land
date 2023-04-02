@@ -3,11 +3,21 @@ import styled from "styled-components";
 import SocialList from "../List/SocialList";
 
 export default function PageHeader() {
+    const lang = localStorage.getItem('lang');
+    let title;
+    switch (lang) {
+        case 'en':
+            title = "On Home Page";
+            break
+        case 'ru':
+        default:
+            title = "На Главную";
+    }
     return (
         <Header>
-            <MainLink to="/"><HeaderLogo /></MainLink>
+            <MainLink to="/"><HeaderLogo title={title}/></MainLink>
             <Division>
-                <SocialList />
+                <SocialList lang={lang}/>
             </Division>
         </Header>
     )
@@ -27,7 +37,7 @@ const MainLink = styled(Link)`
 
 const HeaderLogo = styled.img.attrs(() => ({
     src: "/images/logo.png",
-    alt: "Journey.Land"
+    alt: "Journey.Land",
 }))`
     height: 70px;
     vertical-align: bottom;

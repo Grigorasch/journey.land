@@ -1,10 +1,20 @@
 import styled from "styled-components"
 
 export default function Statistic() {
+    const lang = localStorage.getItem('lang');
+    let label;
+    switch (lang) {
+        case 'en':
+            label = "Bought policies and air tickets"
+            break
+        case 'ru':
+        default:
+            label = "Куплено полисов и авиабилетов"
+    }
     return (
         <Div>
             <HeartImg />
-            <StatisticDescription>Куплено полисов и авиабилетов: 2 294 227</StatisticDescription>
+            <StatisticDescription>{label}: 2 294 227</StatisticDescription>
         </Div>
     )
 }

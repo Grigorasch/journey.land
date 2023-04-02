@@ -2,16 +2,32 @@ import styled from "styled-components";
 import { ColumnListLinks, Div, ListImg } from ".";
 
 export default function MapsMeList() {
+    const lang = localStorage.getItem('lang');
+    const links = {};
+    switch (lang) {
+        case 'en':
+            links.bank = "Bank card"
+            links.esim = "eSim"
+            links.wallet = "Supported by Wallet"
+            links.binance = "Use BINANCE for replenish"
+            break
+        case 'ru':
+        default:
+            links.bank = "Банковская карта"
+            links.esim = "eSim"
+            links.wallet = "Поддерживается Wallet"
+            links.binance = "Для пополнения используйте BINANCE"
+    }
     return (
         <Div noBorder="true">
-            <a href="./ru-ru/mapsme/" class="link-list__logo link-list__logo_mapsme"><ListImg src='./images/list/mapsme.png' /></a>
+            <a href="./ru-ru/mapsme/"><ListImg src='/images/list/mapsme.png' /></a>
             <ColumnListLinks>
-                <li>Банковская карта</li>
-                <li>eSim</li>
-                <li><img src="./images/lists/apple-walletsvg.svg" alt="" width="25px" /><span>Поддерживается Wallet</span></li>
+                <li>{links.bank}</li>
+                <li>{links.esim}</li>
+                <li><img src="/images/lists/apple-walletsvg.svg" alt="" width="25px" /><span>{links.wallet}</span></li>
                 <ListItemCenter>
-                    Для пополнения используйте BINANCE<br />
-                    <img src="./images/list/binance-referral.png" alt="" width="150px" /><br />
+                {links.binance}<br />
+                    <img src="/images/list/binance-referral.png" alt="" width="150px" /><br />
                     <WrapLink href="https://accounts.binance.me/ru/register?ref=399335636" target="_blank">https://accounts.binance.me/ru/register?ref=399335636</WrapLink>
                 </ListItemCenter>
             </ColumnListLinks>
