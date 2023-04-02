@@ -69,4 +69,18 @@ const NavigationSpan = styled.span`
     font-weight: 700;
     line-height: 18px;
     text-align: start;
+
+    @media screen and (max-width: 1400px) {
+        width: 70%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 75%;
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 740px) {
+        font-size: 14px;
+        line-height: 18px;
+    }
 `

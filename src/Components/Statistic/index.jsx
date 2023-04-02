@@ -33,8 +33,21 @@ const HeartImg = styled.img.attrs(() => ({
     margin: 0 20px 0 10px;
     height: 40px;
     vertical-align: middle;
+
+    @media screen and (max-width: 450px) {
+        vertical-align: top;
+    }
 `
 
 const StatisticDescription = styled.span`
     display: inline-block;
+
+    @media screen and (max-width: 450px) {
+        margin-top: 4px;
+        width: 260px;
+    }
+    
+    @media screen and (max-width: 380px) {
+        width: 180px;
+    }
 `
