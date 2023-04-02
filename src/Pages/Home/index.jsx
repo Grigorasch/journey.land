@@ -1,3 +1,5 @@
+import styled from "styled-components";
+import Banner from "../../Components/HomePage/Banner";
 import { PageMain } from "../../Components/PageMain";
 
 export default function Home() {
@@ -18,8 +20,33 @@ export default function Home() {
             textContent.formDescription = "Мы знаем лучшие места в разных городах и покажем вам все!"
     }
     return (
-        <PageMain>
-            
-        </PageMain>
+        <HomePageMain>
+            <HomePageHeading>{textContent.heading}</HomePageHeading>
+            <HomePageSubheading>{textContent.headingDescription}</HomePageSubheading>
+            <Banner />
+        </HomePageMain>
     )
 }
+
+const HomePageMain = styled(PageMain)`
+    padding-top: 40px;
+`
+
+const HomePageHeading = styled.h1`
+    margin: 0 auto 5px;
+    max-width: 900px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    text-align: center;
+`
+
+const HomePageSubheading = styled.span`
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+`

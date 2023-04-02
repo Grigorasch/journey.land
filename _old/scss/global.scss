@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 
-  :last-child
+  &:first-child
 }
 
 html, body, div, span, h1, h2, h3, p, a,
@@ -329,13 +329,13 @@ a {
   }
 }
 
-@media screen and (max-width: 1400px) {
-    .navigation {
-        & span {
-            width: 70%;
-        }
-    }
-}
+// @media screen and (max-width: 1400px) {
+//     .navigation {
+//         & span {
+//             width: 70%;
+//         }
+//     }
+// }
 
 @media screen and (max-width: 1200px) {
     .navigation {
@@ -347,10 +347,10 @@ a {
             width: 24px;
             height: 24px;
         }
-        & span {
-            width: 75%;
-            font-size: 12px;
-        }
+        // & span {
+        //     width: 75%;
+        //     font-size: 12px;
+        // }
     }
 }
 
@@ -411,10 +411,10 @@ a {
         & img {
             vertical-align: middle;
         }
-        & span {
-            font-size: 14px;
-            line-height: 18px;
-        }
+        // & span {
+        //     font-size: 14px;
+        //     line-height: 18px;
+        // }
         & button {
             display: block;
             position: relative;
@@ -494,21 +494,21 @@ a {
         }
     }
 
-    .statistic {
-        & img {
-            vertical-align: top;
-        }
-        & span {
-            margin-top: 4px;
-            width: 260px;
-        }
-    }
+    // .statistic {
+        // & img {
+        //     vertical-align: top;
+        // }
+        // & span {
+        //     margin-top: 4px;
+        //     width: 260px;
+        // }
+    // }
 }
 
-@media screen and (max-width: 380px) {
-    .statistic {
-        & span {
-            width: 180px;
-        }
-    }
-}
+// @media screen and (max-width: 380px) {
+//     .statistic {
+//         & span {
+//             width: 180px;
+//         }
+//     }
+// }
