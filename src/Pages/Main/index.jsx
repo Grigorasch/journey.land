@@ -1,13 +1,10 @@
-import Header from "../../Components/PageHeader";
 import styled from "styled-components";
 import PageAside from "../../Components/PageAside";
 import Statistic from "../../Components/Statistic";
 import TopNavigationList from "../../Components/List/TopNavigationList";
-import { useState } from "react";
 import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
 import PageHeader from "../../Components/PageHeader";
 import PageFooter from "../../Components/PageFooter";
-import { PageMain } from "../../Components/PageMain";
 
 export default function Main() {
     // const [lang, setLang] = useState('ru');

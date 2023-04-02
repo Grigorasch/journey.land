@@ -22,7 +22,7 @@ export default function TopNavigationList() {
     return (
         <NavigationWrapper>
             <NavigationListLinks>
-                <NavigationListItem><Link to={`/${localStorage.getItem('lang') || lang}/aviasales`}><NavigationImg src="/images/icons/plane-ticket.svg" /><NavigationSpan>{links.search}</NavigationSpan></Link></NavigationListItem>
+                <NavigationListItem><Link to={`/${lang}/aviasales`}><NavigationImg src="/images/icons/plane-ticket.svg" /><NavigationSpan>{links.search}</NavigationSpan></Link></NavigationListItem>
                 <NavigationListItem><a href="./ru-ru/tripinsurance/"><NavigationImg src="/images/icons/calculating.svg" /><NavigationSpan>{links.insurance}</NavigationSpan></a></NavigationListItem>
                 <NavigationListItem><a href="./ru-ru/information/"><NavigationImg src="/images/icons/list.svg" /><NavigationSpan>{links.trip}</NavigationSpan></a></NavigationListItem>
                 <NavigationListItem><a href="./ru-ru/documentation/"><NavigationImg src="/images/icons/printing.svg" /><NavigationSpan>{links.get}</NavigationSpan></a></NavigationListItem>
@@ -69,10 +69,6 @@ const NavigationSpan = styled.span`
     font-weight: 700;
     line-height: 18px;
     text-align: start;
-
-    @media screen and (max-width: 1400px) {
-        width: 70%;
-    }
 
     @media screen and (max-width: 1200px) {
         width: 75%;

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Banner from "../../Components/HomePage/Banner";
+import Card from "../../Components/HomePage/Card";
+import { CardContent } from "../../Components/HomePage/CardContent";
 import { PageMain } from "../../Components/PageMain";
 
 export default function Home() {
@@ -24,6 +26,17 @@ export default function Home() {
             <HomePageHeading>{textContent.heading}</HomePageHeading>
             <HomePageSubheading>{textContent.headingDescription}</HomePageSubheading>
             <Banner />
+            <CardsContainer>
+                {CardContent.map(item => {
+                    return (
+                        <Card
+                            key={item[`${lang}Heading`].length * item[`${lang}Description`].length}
+                            heading={item[`${lang}Heading`]}
+                            description={item[`${lang}Description`]}
+                            image={item.image} />
+                    )
+                })}
+            </CardsContainer>
         </HomePageMain>
     )
 }
@@ -49,4 +62,15 @@ const HomePageSubheading = styled.span`
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+`
+
+const CardsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    gap: 20px;
+
+    // margin-top: 20px;
+    margin: 20px auto;
+    width: 820px;
 `

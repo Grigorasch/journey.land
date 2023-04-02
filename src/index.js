@@ -51,6 +51,10 @@ const router = createBrowserRouter([
         path: "/:lang/aviasales",
         element: <Aviasales />
       },
+      {
+        path: "/:lang/tripinsurance",
+        // element: <Aviasales />
+      },
     ],
   }
 ])

@@ -19,9 +19,7 @@
     window.addEventListener('error', function (e) {
       console.error(e.message);
       if (e.message.includes("ResizeObserver loop limit exceeded")) {
-        // prevent React's listener from firing
         e.stopImmediatePropagation();
-        // prevent the browser's console error message
         e.preventDefault();
       }
     });
