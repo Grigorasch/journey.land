@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FeedbackButton } from "../../Components/Button";
+import { FeedbackButton } from "../Button/FeedbackButton";
 import AsideNavigationList from "../List/AsideNavigationList";
 import MapsMeList from "../List/MapsMeList";
 import AviasalesList from "../List/AviasalesList";

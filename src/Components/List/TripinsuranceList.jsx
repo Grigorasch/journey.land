@@ -29,13 +29,7 @@ export default function TripinsuranceList() {
             <ColumnListLinks>
                 <li><Link to={`/${lang}/tripinsurance?head=1&country=1`}>{links.schengen}</Link></li>
                 <li><Link to={`/${lang}/tripinsurance?head=2&country=2`}>{links.russia}</Link></li>
-                <li><Link onClick={event => {
-                    event.preventDefault();
-                    setSearchParams(params => {
-                        params.set('showList', 'true');
-                        return params;
-                    })
-                }}>{links.country}</Link></li>
+                <li><Link to={`/${lang}/tripinsurance?head=3&showList=true`}>{links.country}</Link></li>
                 <li><a href="https://fm.tripinsurance.ru/Home/Details?Product=1&From=01.08.2014&To=07.08.2014&Days=7&Country=0&Territory=23&Sport=True&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=27&selectedSlot=3&specialOffer=true&fullModule=true&partnerId=3267">{links.ski}</a></li>
                 <li><a href="https://fm.tripinsurance.ru/Home/Details?Product=3&From=01.01.2014&Days=365&Country=0&Territory=23&Sport=False&ProSport=False&DangerWork=False&Offline=False&PartnerMode=False&IsfromPartner=False&Age%5B0%5D=28&selectedSlot=1&specialOffer=true&providerId=3&fullModule=true&partnerId=3267">{links.year}</a></li>
             </ColumnListLinks>
