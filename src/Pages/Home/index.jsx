@@ -29,13 +29,14 @@ export default function Home() {
             <HomePageSubheading>{textContent.headingDescription}</HomePageSubheading>
             <Banner />
             <CardsContainer>
-                {CardContent.map(item => {
+                {CardContent.map((item, index) => {
                     return (
                         <Card
                             key={item[`${lang}Heading`].length * item[`${lang}Description`].length}
                             heading={item[`${lang}Heading`]}
                             description={item[`${lang}Description`]}
-                            image={item.image} />
+                            image={item.image} 
+                            index={index} />
                     )
                 })}
             </CardsContainer>

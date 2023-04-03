@@ -1,15 +1,27 @@
 import styled from "styled-components"
 
-export default function Card({ heading, description, image }) {
-    return (
-        <CardWrapper>
-            <TextWrapper>
-                <CardHeading>{heading}</CardHeading>
-                <CardDescription>{description}</CardDescription>
-            </TextWrapper>
-            <CardImages src={image} />
-        </CardWrapper>
-    )
+export default function Card({ heading, description, image, index }) {
+    if (index % 2) {
+        return (
+            <CardWrapper>
+                <TextWrapper>
+                    <CardHeading>{heading}</CardHeading>
+                    <CardDescription>{description}</CardDescription>
+                </TextWrapper>
+                <CardImages src={image} />
+            </CardWrapper>
+        )
+    } else {
+        return (
+            <CardWrapper>
+                <CardImages src={image} />
+                <TextWrapper>
+                    <CardHeading>{heading}</CardHeading>
+                    <CardDescription>{description}</CardDescription>
+                </TextWrapper>
+            </CardWrapper>
+        )
+    }
 }
 
 const CardWrapper = styled.div`
