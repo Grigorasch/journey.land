@@ -12,8 +12,8 @@ export default function LanguageButton() {
 }
 
 function changeLanguage(currentLang, selectLang) {
-    const url = location.pathname.replace(`/${currentLang}/`, `/${selectLang}/`);
-    navigate(url);
+    // const url = location.pathname.replace(`/${currentLang}/`, `/${selectLang}/`);
+    // navigate(url);
 }
 
 const Button = styled.button`

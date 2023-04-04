@@ -20,6 +20,7 @@ import { element } from 'prop-types';
 import Reviews from './Pages/Company/Reviews';
 import Insurance from './Pages/Company/Insurance';
 import Info from './Pages/Company/Info';
+import { createGlobalStyle } from 'styled-components';
 
 const router = createBrowserRouter([
   {
@@ -94,9 +95,86 @@ const router = createBrowserRouter([
   }
 ])
 
+const GlobalStyle = createGlobalStyle`
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul,
+li,
+form,
+label,
+aside,
+footer,
+header,
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+aside,
+nav {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    padding: 0 10px 10px;
+    min-height: 100%;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 70%, rgba(255, 255, 255, 0) 95%) top / 100% 10000px no-repeat,
+        url(/images/background.png) top / cover no-repeat,
+        #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+`
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+  <React.Fragment>
+    <GlobalStyle />
+    <RouterProvider router={router} />
+  </React.Fragment>
 );
 
 reportWebVitals();

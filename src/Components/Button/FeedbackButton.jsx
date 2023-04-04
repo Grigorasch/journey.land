@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export function FeedbackButton() {
+export function FeedbackButton({ onClick }) {
     const lang = localStorage.getItem('lang');
     let label;
     switch (lang) {
@@ -11,8 +11,9 @@ export function FeedbackButton() {
         default:
             label = "Написать"
     }
+    console.log('a');
     return (
-        <Feedback>{label}</Feedback>
+        <Feedback onClick={e => onClick()} id="feedback">{label}</Feedback>
     )
 }
 
@@ -24,7 +25,8 @@ const Feedback = styled.button`
     width: 170px;
     height: 40px;
 
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: inherit;
     font-weight: 600;
     color: #3b3c3f;
 
@@ -33,4 +35,12 @@ const Feedback = styled.button`
     border: 3px solid #e7e7ee;
     cursor: pointer;
     transition: 0.3s;
+
+    @media screen and (max-width: 1200px) {
+        width: 120px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 170px;
+    }
 `

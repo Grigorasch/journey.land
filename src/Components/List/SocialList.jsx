@@ -39,9 +39,6 @@ const SocialListLinks = styled(RowListLinks)`
     column-gap: 20px;
     flex-wrap: wrap;
 
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     margin: 0 auto;
 
     max-width: 600px;

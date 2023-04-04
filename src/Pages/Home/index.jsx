@@ -57,6 +57,12 @@ const HomePageHeading = styled.h1`
     line-height: 48px;
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and (max-width: 1200px) {
+        max-width: 700px;
+        font-size: 36px;
+        line-height: 42px;
+    }
 `
 
 const HomePageSubheading = styled.span`
@@ -66,6 +72,11 @@ const HomePageSubheading = styled.span`
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 16px;
+        line-height: 18px;
+    }
 `
 
 const CardsContainer = styled.div`

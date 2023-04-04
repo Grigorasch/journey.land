@@ -23,7 +23,7 @@ export const RowListLinks = styled.ul`
     padding-left: 1em;
     padding-right: 1em;
     border-radius: 8px;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: 600;
 `
 
