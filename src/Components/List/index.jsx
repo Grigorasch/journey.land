@@ -8,11 +8,11 @@ export const Div = styled.div`
 export const ListImg = styled.img.attrs(() => ({
     alt: ""
 }))`
-    margin: 0 54px 1em;
+    margin-bottom: 1em;
     padding: ${props => props.backgroundColor ? "0.3em 0.5em" : "0"};
     width: 160px;
     border-radius: 3px;
-    background: ${props => props.backgroundColor || "transparent"}
+    background: ${props => props.backgroundColor || "transparent"};
 `
 
 export const RowListLinks = styled.ul`

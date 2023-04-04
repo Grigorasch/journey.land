@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ColumnListLinks, Div, ListImg } from ".";
 
@@ -20,7 +21,7 @@ export default function MapsMeList() {
     }
     return (
         <Div noBorder="true">
-            <a href="./ru-ru/mapsme/"><ListImg src='/images/list/mapsme.png' /></a>
+            <Link to={`/${lang}/mapsme`}><ListImg src='/images/list/mapsme.png' /></Link>
             <ColumnListLinks>
                 <li>{links.bank}</li>
                 <li>{links.esim}</li>

@@ -38,8 +38,7 @@ const Aside = styled.aside`
 
 const ButtonWrapper = styled.div`
     height: 100px;
-    text-align: start;
-    padding-left: 49px;
+    text-align: center;
     border-top-left-radius: 1rem;
     border-bottom: 2px solid #4f4c4e;
 `

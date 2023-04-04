@@ -1,3 +1,4 @@
+import { useLocation } from "react-router";
 import styled from "styled-components";
 import Banner from "../../Components/HomePage/Banner";
 import Card from "../../Components/HomePage/Card";

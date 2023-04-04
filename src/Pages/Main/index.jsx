@@ -2,11 +2,17 @@ import styled from "styled-components";
 import PageAside from "../../Components/PageAside";
 import Statistic from "../../Components/Statistic";
 import TopNavigationList from "../../Components/List/TopNavigationList";
-import { Outlet, redirect, useLoaderData } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import PageHeader from "../../Components/PageHeader";
 import PageFooter from "../../Components/PageFooter";
+import { useEffect } from "react";
 
 export default function Main() {
+    const { lang } = useParams();
+    const location = useLocation()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname])
     return (
         <div>
             <PageHeader />

@@ -2,8 +2,8 @@ export const CardContent = [
     {
         ruHeading: "Покрываем коронавирус",
         enHeading: "Covering the Coronavirus",
-        ruDescription: "Все наши полисы покрывают лечение и диагностику в случае заражения COVID-19, ведь не все страны готовы лечить коронавирус за свой счет. Максимальное покрытие по медицинским расходам составит 100\u00A0000 USD/EUR. Также полисом предусмотрена компенсация по риску отмена поездки, если застрахованный заболеет COVID-19.",
-        enDescription: "All our policies cover treatment and diagnostics in case of infection with COVID-19, because not all countries are ready to treat coronavirus at their own expense. The maximum coverage for medical expenses will be 100,000 USD/EUR. The policy also provides compensation for the risk of trip cancellation if the insured person falls ill with COVID-19.",
+        ruDescription: "Все наши полисы покрывают лечение и диагностику в случае заражения COVID\u201119, ведь не все страны готовы лечить коронавирус за свой счет. Максимальное покрытие по медицинским расходам составит 100\u00A0000 USD/EUR. Также полисом предусмотрена компенсация по риску отмена поездки, если застрахованный заболеет COVID\u201119.",
+        enDescription: "All our policies cover treatment and diagnostics in case of infection with COVID\u201119, because not all countries are ready to treat coronavirus at their own expense. The maximum coverage for medical expenses will be 100,000 USD/EUR. The policy also provides compensation for the risk of trip cancellation if the insured person falls ill with COVID\u201119.",
         image: "/images/card/covid.png"
     },
     {

@@ -1,8 +1,9 @@
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { ColumnListLinks } from '.';
 
 export default function AsideNavigationList() {
-    const lang = localStorage.getItem('lang');
+    const { lang } = useParams();
     const links = {};
     switch (lang) {
         case 'en':
@@ -23,12 +24,12 @@ export default function AsideNavigationList() {
     return (
         <nav>
             <ColumnLeftListLinks>
-                <li><a href="./ru-ru/company/information/">{links.info}</a></li>
+                <li><Link to={`/${lang}/company/info`}>{links.info}</Link></li>
                 <li></li>
-                <li><a href="./ru-ru/company/case/">{links.insurance}</a></li>
-                <li><a href="./ru-ru/company/reviews/">{links.reviews}</a></li>
-                <li><a href="./ru-ru/company/faq/">{links.faq}</a></li>
-                <li><a href="./ru-ru/company/about/">{links.about}</a></li>
+                <li><Link to={`/${lang}/company/insurance`}>{links.insurance}</Link></li>
+                <li><Link to={`/${lang}/company/reviews`}>{links.reviews}</Link></li>
+                <li><Link to={`/${lang}/company/faq`}>{links.faq}</Link></li>
+                <li><Link to={`/${lang}/company`}>{links.about}</Link></li>
             </ColumnLeftListLinks>
         </nav>
     )

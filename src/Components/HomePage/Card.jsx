@@ -4,8 +4,8 @@ export default function Card({ heading, description, image, index }) {
     if (index % 2) {
         return (
             <CardWrapper>
-                <TextWrapper>
-                    <CardHeading>{heading}</CardHeading>
+                <TextWrapper align="start">
+                    <CardHeading after="left">{heading}</CardHeading>
                     <CardDescription>{description}</CardDescription>
                 </TextWrapper>
                 <CardImages src={image} />
@@ -15,8 +15,8 @@ export default function Card({ heading, description, image, index }) {
         return (
             <CardWrapper>
                 <CardImages src={image} />
-                <TextWrapper>
-                    <CardHeading>{heading}</CardHeading>
+                <TextWrapper align="end">
+                    <CardHeading after="right">{heading}</CardHeading>
                     <CardDescription>{description}</CardDescription>
                 </TextWrapper>
             </CardWrapper>
@@ -37,6 +37,7 @@ const CardWrapper = styled.div`
 
 const TextWrapper = styled.div`
     margin-right: 10px;
+    text-align: ${props => props.align};
 `
 
 const CardHeading = styled.h2`
@@ -52,7 +53,7 @@ const CardHeading = styled.h2`
         content: "";
         position: absolute;
         bottom: -15px;
-        left: 0;
+        ${props => props.after}: 0;
         width: 50px;
         height: 2px;
         background: #7358e5;
@@ -71,5 +72,5 @@ const CardDescription = styled.p`
 const CardImages = styled.img.attrs(() => ({
     alt: ""
 }))`
-    height: 80%;
+    height: 75%;
 `
