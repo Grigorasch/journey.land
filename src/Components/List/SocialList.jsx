@@ -49,6 +49,13 @@ const SocialListLinks = styled(RowListLinks)`
     line-height: 50px;
     color: #1972de;
     transition: width 0.3s, height 0.3s;
+
+    @media screen and (max-width: 935px) {
+        width: 325px;
+        line-height: 21px;
+        font-size: 14px;
+        row-gap: 5px;
+    }
 `
 
 const HiddenListItem = styled.li`

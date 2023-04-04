@@ -14,11 +14,6 @@ export default function Main() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
-    const juu = css`
-        background: blue;
-        width:40px;
-    `
-    console.log(juu, 'JUU');
     return (
         <div>
             <PageHeader burgerOnClick={() => setAsideVisible(value => !value)} />
@@ -49,5 +44,10 @@ const MainSide = styled.div`
     display: flex;
     flex-direction: column;
     width: min-content;
+
+    @media screen and (max-width: 1000px) {
+        flex-shrink: 0;
+        width: 100%;
+    }
 `
 

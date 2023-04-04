@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router";
 import { PageMain } from "../../Components/PageMain";
 
 const links = {};
 export default function Aviasales() {
+    const location = useLocation();
     const lang = localStorage.getItem('lang');
     switch (lang) {
         case 'en':
@@ -33,7 +35,16 @@ export default function Aviasales() {
                 console.log('bbb');
             }
         }
-    },[]);
+    }, []);
+
+    //Следим за перенаправлением на сайт бронирования отелей и отменяем переход
+    useEffect(() => {
+        window.addEventListener("beforeunload", (event) => {
+            event.preventDefault();
+            console.log(event);
+        });
+    }, [])
+
     return (
         <PageMain ref={ref} />
     )
