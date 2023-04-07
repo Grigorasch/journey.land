@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import SocialList from "../List/SocialList";
 
 export default function PageHeader({ burgerOnClick }) {
-    const lang = localStorage.getItem('lang');
+    const lang = useParams();
     let title;
     switch (lang) {
         case 'en':
@@ -26,15 +26,24 @@ export default function PageHeader({ burgerOnClick }) {
 
 const Division = styled.div`
     flex-grow: 1;
+    height: 50px;
 `
 
 const Header = styled.header`
     display: flex;
     align-items: center;
+    
+    @media screen and (max-width: 935px) {
+        padding: 5px 0;
+    }
 `
 
 const MainLink = styled(Link)`
     margin-left: 50px;
+
+    @media screen and (max-width: 935px) {
+        margin-left: 25px;
+    }
 `
 
 const HeaderLogo = styled.img.attrs(() => ({
@@ -43,6 +52,10 @@ const HeaderLogo = styled.img.attrs(() => ({
 }))`
     height: 70px;
     vertical-align: bottom;
+
+    @media screen and (max-width: 935px) {
+        height: 50px;
+    }
 `
 
 const BurgerButton = styled.button`
@@ -56,7 +69,7 @@ const BurgerButton = styled.button`
     border: none;
     border-radius: 5px;
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1000px) {
         display: block;
     }
 `

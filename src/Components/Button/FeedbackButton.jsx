@@ -1,7 +1,8 @@
+import { useParams } from "react-router";
 import styled from "styled-components"
 
 export function FeedbackButton({ onClick }) {
-    const lang = localStorage.getItem('lang');
+    const lang = useParams();
     let label;
     switch (lang) {
         case 'en':
@@ -11,7 +12,6 @@ export function FeedbackButton({ onClick }) {
         default:
             label = "Написать"
     }
-    console.log('a');
     return (
         <Feedback onClick={e => onClick()} id="feedback">{label}</Feedback>
     )

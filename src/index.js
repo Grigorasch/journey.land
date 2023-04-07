@@ -26,28 +26,19 @@ const router = createBrowserRouter([
   {
     path: "/:lang?",
     element: <Main />,
-    loader: ({ request, params }) => {
+    loader: ({ params }) => {
       switch (params.lang) {
         case 'ru':
         case 'en':
-          localStorage.setItem('lang', params.lang);
           return params;
         default:
-          if (localStorage.getItem('lang')) {
-            return redirect(`/${localStorage.getItem('lang')}`)
-          } else {
-            return redirect('/ru');
-          }
+          return redirect('/ru');
       }
     },
     children: [
       {
         index: true,
         element: <Home />,
-        loader: ({ params }) => {
-          console.log(params);
-          return null
-        }
       },
       {
         path: "aviasales",

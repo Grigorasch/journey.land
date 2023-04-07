@@ -1,7 +1,10 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { RowListLinks } from ".";
 
 export default function SocialList({ lang }) {
+    const [isOpen, setOpen] = useState(false);
     const socialName = {};
     switch (lang) {
         case 'en':
@@ -21,12 +24,13 @@ export default function SocialList({ lang }) {
             socialName.tw = 'Твитер'
             socialName.tg = 'Телеграм'
     }
+
     return (
-        <SocialListLinks>
-            {/* <HiddenListItem><a href="javascript:void(0)">Мы в соцсетях</a></HiddenListItem> */}
+        <SocialListLinks  isListOpen={isOpen}>
+            <li><SocialListButton as="button" onClick={e => setOpen(state => !state)}>Мы в соцсетях</SocialListButton></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/vk.svg" alt="" />{socialName.vk}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/facebook.svg" alt="" />{socialName.fb}</a></li>
-            <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/instagram.svg" alt="" />{socialName.in}</a></li>
+            <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/instagram.svg" alt="" />{socialName.in  }</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/twitter.svg" alt="" />{socialName.tw}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/telegram.svg" alt="" />{socialName.tg}</a></li>
         </SocialListLinks>
@@ -51,10 +55,38 @@ const SocialListLinks = styled(RowListLinks)`
     transition: width 0.3s, height 0.3s;
 
     @media screen and (max-width: 935px) {
-        width: 325px;
+        width: 340px;
         line-height: 21px;
         font-size: 14px;
         row-gap: 5px;
+    }
+
+    @media screen and (max-width: 690px) {
+        align-items: flex-start;
+        gap: 0;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        width: 150px;
+        height: ${props => {
+        if (props.isListOpen) {
+            return '300px'
+        } else {
+            return '50px'
+        }
+    }};
+        font-size: 16px;
+        line-height: 50px;
+    }
+
+    @media screen and (min-width: 690px) {
+        & li:first-child {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+        font-size: 14px;
     }
 `
 
@@ -67,4 +99,18 @@ const SocialItemImg = styled.img`
     width: 1.2em;
     height: 1.2em;
     vertical-align: text-bottom;
+`
+
+const SocialListButton = styled(Link)`
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `

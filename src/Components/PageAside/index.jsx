@@ -5,32 +5,26 @@ import MapsMeList from "../List/MapsMeList";
 import AviasalesList from "../List/AviasalesList";
 import TripinsuranceList from "../List/TripinsuranceList";
 import LevelTravelList from "../List/LevelTravelList";
-import React, { useEffect, useRef, useState } from "react";
-import { useBeforeUnload } from "react-router-dom";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useBeforeUnload, useParams } from "react-router-dom";
 
 
 export default function PageAside({ state }) {
-    const lang = localStorage.getItem('lang');
+    const lang = useParams();
     const [isAsideVisible, setAsideVisible] = state;
-    const asideState = useRef(0);
-    useBeforeUnload(
-        React.useCallback(() => {
-            localStorage.stuff = 'state';
-        })
-    );
-
-        useEffect(() => {
-            window.addEventListener('resize', () => console.log('CHANGE'));
-            return () => window.removeEventListener('resize');
-        }, [])
+    
+    useEffect(() => {
+        mediaQuery.addEventListener('change', event => {
+            if (event.matches) {
+                setAsideVisible(value => false);
+            }
+        });
+    }, [])
 
     return (
         <Aside isAsideVisible={isAsideVisible} onClick={event => console.log(event.target)}>
             <ButtonWrapper>
-                <FeedbackButton onClick={event => {
-                    asideState.current++;
-                    console.log(asideState.current);
-                }} />
+                <FeedbackButton />
             </ButtonWrapper>
             <LevelTravelList />
             <TripinsuranceList />
@@ -82,3 +76,5 @@ const ButtonWrapper = styled.div`
 const Separator = styled.div`
     flex-grow: 1;
 `
+
+const mediaQuery = window.matchMedia('(min-width: 1000px)');

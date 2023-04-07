@@ -2,18 +2,28 @@ import styled, { css } from "styled-components";
 import PageAside from "../../Components/PageAside";
 import Statistic from "../../Components/Statistic";
 import TopNavigationList from "../../Components/List/TopNavigationList";
-import { Outlet, useLocation, useParams } from "react-router-dom";
+import { Outlet, useBeforeUnload, useLocation, useParams } from "react-router-dom";
 import PageHeader from "../../Components/PageHeader";
 import PageFooter from "../../Components/PageFooter";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Main() {
     const { lang } = useParams();
-    const location = useLocation()
+    const location = useLocation();
+    //Восстанавливаем начальное состояние из памяти или устанавливаем выкл.
     const [isAsideVisible, setAsideVisible] = useState(Boolean(sessionStorage.getItem('isAsideVisible')));
+
+    //Перед выгрузкой сохраням состояние в память
+    useBeforeUnload(
+        React.useCallback(() => {
+            sessionStorage.setItem('isAsideVisible', isAsideVisible || '');
+        }, [isAsideVisible])
+    );
+
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
+
     return (
         <div>
             <PageHeader burgerOnClick={() => setAsideVisible(value => !value)} />
