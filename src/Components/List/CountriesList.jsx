@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import styled from "styled-components"
 
 export default function CountriesList({ heading, countriesList }) {
+    const {lang} = useParams();
     return (
         <CountriesWrapper>
             <CountriesHeading>{heading}</CountriesHeading>
@@ -9,7 +10,7 @@ export default function CountriesList({ heading, countriesList }) {
                 {countriesList.map(item => {
                     return (
                         <CountriesItem key={item.id * item.idOrigin}>
-                            <CountryLink to={`/${localStorage.getItem('lang')}/tripinsurance?head=4&country=${item.id}`} onClick={() => setTimeout(() => window.scrollTo(0,0),300)}>{item.name}</CountryLink>
+                            <CountryLink to={`/${lang}/tripinsurance?head=4&country=${item.id}`} onClick={() => setTimeout(() => window.scrollTo(0,0),300)}>{item.name}</CountryLink>
                         </CountriesItem>
                     )
                 })}

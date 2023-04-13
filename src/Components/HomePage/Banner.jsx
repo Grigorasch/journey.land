@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Banner() {
-    const lang = localStorage.getItem('lang');
+    const {lang} = useParams();
     const textContent = {};
     switch (lang) {
         case 'en':
@@ -43,6 +43,21 @@ const BannerContainer = styled.div`
     width: 820px;
     height: 200px;
     background: #141414;
+
+    @media screen and (max-width: 1100px) {
+        width: 700px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0 15px;
+        width: auto;
+    }
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+        align-item: center;
+        height: auto;
+    }
 `
 
 const BannerWrapper = styled.div`
@@ -53,16 +68,36 @@ const BannerWrapper = styled.div`
     height: 100%;
     border-radius: 10px;
     background: url(/images/icons/airplane.svg) 410px 40px/auto 160px no-repeat, #1d1d1d;
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+        align-item: center;
+        padding: 15px 30px;
+    }
 `
 
 const BannerTextWrapper = styled.div`
     max-width: 500px;
+
+    @media screen and (max-width: 550px) {
+        max-width: 330px;
+    }
 `
 
 const BannerHeading = styled.h2`
     font-size: 36px;
     font-weight: 700;
     line-height: 40px;
+
+    @media screen and (max-width: 650px) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    @media screen and (max-width: 450px) {
+        font-size: 22px;
+        line-height: 28px;
+    }
 `
 
 const BannerSubheading = styled.span`
@@ -71,6 +106,16 @@ const BannerSubheading = styled.span`
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
+
+    @media screen and (max-width: 650px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
 `
 
 const BannerLinksWrapper = styled.div`
@@ -78,6 +123,10 @@ const BannerLinksWrapper = styled.div`
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
 `
 
 const BannerLink = styled(Link)`
@@ -92,10 +141,24 @@ const BannerLink = styled(Link)`
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
+
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
 `
 
 const AviasalesLink = styled(BannerLink)`
     padding-top: 15px;
+
+    @media screen and (max-width: 550px) {
+        padding-top: 22px;
+    }
+
+    @media screen and (max-width: 420px) {
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 `
 
 const TripinsuranceLink = styled(BannerLink)`

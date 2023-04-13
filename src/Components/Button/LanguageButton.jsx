@@ -5,15 +5,20 @@ export default function LanguageButton() {
     const { lang } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
     return (
-        <Button><FlagImage src="/images/icons/rus-flag.svg" /></Button>
+        <Button onClick={() => changeLanguage(lang, location, navigate)}><FlagImage src={`/images/icons/${lang}-flag.svg`} /></Button>
     )
 }
 
-function changeLanguage(currentLang, selectLang) {
-    // const url = location.pathname.replace(`/${currentLang}/`, `/${selectLang}/`);
-    // navigate(url);
+function changeLanguage(currentLang, location, navigate) {
+    switch (currentLang) {
+        case 'ru':
+            navigate(location.pathname.replace(/\/ru/, '/en') + location.search + location.hash);
+            break
+        case 'en':
+        default:
+            navigate(location.pathname.replace(/\/\w{2}/, '/ru') + location.search + location.hash);
+    }
 }
 
 const Button = styled.button`

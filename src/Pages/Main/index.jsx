@@ -24,6 +24,10 @@ export default function Main() {
         window.scrollTo(0, 0);
     }, []);
 
+    useEffect(() => {
+        setAsideVisible(value => false);
+    }, [location.pathname, location.search, location.hash])
+
     return (
         <div>
             <PageHeader burgerOnClick={() => setAsideVisible(value => !value)} />

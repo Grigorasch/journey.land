@@ -22,7 +22,7 @@ export default function PageAside({ state }) {
     }, [])
 
     return (
-        <Aside isAsideVisible={isAsideVisible} onClick={event => console.log(event.target)}>
+        <Aside isAsideVisible={isAsideVisible}>
             <ButtonWrapper>
                 <FeedbackButton />
             </ButtonWrapper>

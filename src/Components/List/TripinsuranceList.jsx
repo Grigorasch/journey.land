@@ -1,8 +1,8 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ColumnListLinks, Div, ListImg } from ".";
 
 export default function TripinsuranceList() {
-    const lang = localStorage.getItem('lang');
+    const {lang} = useParams();
     const links = {};
     switch (lang) {
         case 'en':

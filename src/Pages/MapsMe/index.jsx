@@ -6,12 +6,12 @@ export default function MapsMe() {
     return (
         <PageMain>
             <GridWrapper>
-            <Card image="/images/mapsme/IMG_4292.png"/>
-            <Card image="/images/mapsme/IMG_4293.png"/>
-            <Card image="/images/mapsme/IMG_4295.png"/>
-            <div><CardImage src="/images/mapsme/IMG_4290.png" /></div>
-            <Card image="/images/mapsme/IMG_4294.png"/>
-            <CardSize image="/images/mapsme/IMG_4301.jpg"/>
+                <Card image="/images/mapsme/IMG_4292.png" />
+                <Card image="/images/mapsme/IMG_4293.png" />
+                <Card image="/images/mapsme/IMG_4295.png" />
+                <div><CardImage src="/images/mapsme/IMG_4290.png" /></div>
+                <Card image="/images/mapsme/IMG_4294.png" />
+                <CardSize image="/images/mapsme/IMG_4301.jpg" />
                 {/* <CardWrapper><CardImage src="/images/mapsme/IMG_4292.png" /></CardWrapper>
                 <CardWrapper><CardImage src="/images/mapsme/IMG_4293.png" /></CardWrapper>
                 <CardWrapper><CardImage src="/images/mapsme/IMG_4295.png" /></CardWrapper>
@@ -30,6 +30,29 @@ const GridWrapper = styled.div`
     grid-template-rows: repeat(2, 400px);
     gap: 10px;
     width: fit-content;
+    transition: 0.3s;
+    
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(4, 180px);
+        grid-template-rows: repeat(2, 360px);
+    }
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: repeat(4, 21vw);
+        grid-template-rows: repeat(2, 42vw);
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(2, 42vw);
+        grid-template-rows: repeat(4, 84vw);
+    }
+
+    @media screen and (max-width: 400px) {
+        grid-template-columns: repeat(2, 38vw);
+        grid-template-rows: repeat(4, 76vw);
+    }
+    
 `
 
 const Card = styled.div`
@@ -61,4 +84,24 @@ const ContentWrapper = styled.div`
     border-radius: 40px;
     text-align: center;
     line-height: 400px;
+
+    @media screen and (max-width: 1100px) {
+        line-height: 360px;
+    }
+
+    @media screen and (max-width: 800px) {
+        line-height: 42vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        line-height: 90vw;
+    }
+    
+    @media screen and (max-width: 400px) {
+        line-height: 76vw;
+    }
 `

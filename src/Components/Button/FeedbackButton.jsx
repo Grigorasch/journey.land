@@ -13,7 +13,7 @@ export function FeedbackButton({ onClick }) {
             label = "Написать"
     }
     return (
-        <Feedback onClick={e => onClick()} id="feedback">{label}</Feedback>
+        <Feedback >{label}</Feedback>
     )
 }
 

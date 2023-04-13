@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ColumnListLinks, Div, ListImg } from ".";
 
 export default function AviasalesList() {
-    const lang = localStorage.getItem('lang');
+    const {lang} = useParams();
     const links = {};
     switch (lang) {
         case 'en':

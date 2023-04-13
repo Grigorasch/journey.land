@@ -25,19 +25,30 @@ export default function Card({ heading, description, image, index }) {
 }
 
 const CardWrapper = styled.div`
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     padding: 0 10px;
     width: 820px;
     height: 300px;
     background: #ffffff;
+
+    @media screen and (max-width: 1100px) {
+        width: 700px;
+    }
 `
 
 const TextWrapper = styled.div`
+    /* align-self: flex-end; */
     margin-right: 10px;
     text-align: ${props => props.align};
+
+    @media screen and (max-width: 1100px) {
+    /* align-self: flex-end; */
+        width: 700px;
+    }
 `
 
 const CardHeading = styled.h2`
@@ -73,4 +84,9 @@ const CardImages = styled.img.attrs(() => ({
     alt: ""
 }))`
     height: 75%;
+
+    @media screen and (max-width: 1100px) {
+        align-self: flex-start;
+        height: 65%;
+    }
 `

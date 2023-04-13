@@ -33,7 +33,7 @@ export default function PageFooter() {
                 <Link to={`/${lang}/company/job`}>{links.job}</Link>
                 <Link to={`/${lang}/company/help`}>{links.help}</Link>
                 <span>© 2001-2023</span>
-                <Logo src={`/images/icons/${lang}-flag.svg`} alt="Переключатель языка" />
+                {/* <Logo src={`/images/icons/${lang}-flag.svg`} alt="Переключатель языка" /> */}
                 <LanguageButton />
             </LinksWrapper>
         </Footer>
@@ -49,15 +49,34 @@ const Footer = styled.footer`
     font-size: 14px;
     font-weight: 700;
     border-top: 2px solid rgb(79, 76, 78);
+
+    @media screen and (max-width: 850px) {
+        flex-wrap: wrap;
+        height: 90px;
+    }
+
+    @media screen and (max-width: 500px) {
+        height: 90px;
+        padding-bottom: 5px;
+    }
 `
 
 const Logo = styled.img.attrs(() => ({
     alt: ""
 }))`
-    width: 30px;
+    /* width: 30px; */
+    height: 30px;
 
     &:not(:last-child) {
         margin-right: 25px;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 15px;
+        
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
 `
 
@@ -67,7 +86,7 @@ const CardSystemImg = styled.img.attrs(() => ({
     height: 30px;
 
     &:first-child {
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
 
     &:not(:last-child) {
@@ -75,7 +94,23 @@ const CardSystemImg = styled.img.attrs(() => ({
     }
 
     &:last-child {
-        margin-right: 10px;
+        /* margin-right: 10px; */
+    }
+
+    @media screen and (max-width: 500px) {
+        height: 20px;
+
+        &:first-child {
+            /* margin-left: 10px; */
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            /* margin-right: 10px; */
+        }
     }
 `
 
@@ -83,4 +118,14 @@ const LinksWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     width: 55%;
+
+    @media screen and (max-width: 850px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 12px;
+    }
 `

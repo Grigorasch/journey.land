@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components"
 import { RowListLinks } from "."
 
 export default function TopNavigationList() {
-    const lang = localStorage.getItem('lang');
+    const {lang} = useParams();
     const links = {};
     switch (lang) {
         case 'en':
@@ -51,6 +51,8 @@ const NavigationListLinks = styled(RowListLinks)`
 const NavigationListItem = styled.li`
     white-space: nowrap;
 `
+
+// const Navi
 
 const NavigationImg = styled.img.attrs(() => ({
     alt: ""

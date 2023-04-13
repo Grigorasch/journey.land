@@ -15,7 +15,7 @@ export default function PageHeader({ burgerOnClick }) {
     }
     return (
         <Header>
-            <MainLink to="/"><HeaderLogo title={title}/></MainLink>
+            <MainLink to={`/${lang}`}><HeaderLogo title={title}/></MainLink>
             <Division>
                 <SocialList lang={lang}/>
             </Division>
@@ -43,6 +43,10 @@ const MainLink = styled(Link)`
 
     @media screen and (max-width: 935px) {
         margin-left: 25px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 0px;
     }
 `
 
@@ -72,6 +76,10 @@ const BurgerButton = styled.button`
     @media screen and (max-width: 1000px) {
         display: block;
     }
+
+    @media screen and (max-width: 480px) {
+        height: 34px;
+    }
 `
 
 const BurgerSpan = styled.span`
@@ -83,5 +91,11 @@ const BurgerSpan = styled.span`
 
     &:not(:last-child) {
         margin-bottom: 6px;
+    }
+
+    
+    @media screen and (max-width: 480px) {
+        width: 30px;
+        height: 4px;
     }
 `

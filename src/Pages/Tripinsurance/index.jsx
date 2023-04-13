@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import CountriesList from "../../Components/List/CountriesList";
 import { PageMain } from "../../Components/PageMain";
@@ -7,7 +7,7 @@ import { Countries } from "./Countries";
 import CountriesSearchButton from "../../Components/Button/CountriesSearchButton"
 
 export default function Tripinsurance() {
-    const lang = localStorage.getItem('lang');
+    const { lang } = useParams();
     switch (lang) {
         case 'en':
             document.title = 'Tripinsurance | Jorney Land';
@@ -114,7 +114,7 @@ export default function Tripinsurance() {
                         if (!data.current.dataList[order][number].name.includes(data.current.current)) {
                             condit = false;
                             data.current.domList[order][number].style = 'display: none';
-                            i++; 
+                            i++;
                         }
                     } else {
                         i++;
@@ -152,7 +152,7 @@ export default function Tripinsurance() {
                 return list;
             })
         }
-console.log(data.current);
+        console.log(data.current);
     }, [searchText]);
 
     const ChildrenList = [];

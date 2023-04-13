@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { RowListLinks } from ".";
@@ -24,13 +24,20 @@ export default function SocialList({ lang }) {
             socialName.tw = 'Твитер'
             socialName.tg = 'Телеграм'
     }
+    useEffect(() => {
+        document.addEventListener('click', e => {
+            if (e.target.id !== "socialListButton" && isOpen) {
+                setOpen(state => false)
+            }
+        })
+    }, []);
 
     return (
-        <SocialListLinks  isListOpen={isOpen}>
-            <li><SocialListButton as="button" onClick={e => setOpen(state => !state)}>Мы в соцсетях</SocialListButton></li>
+        <SocialListLinks isListOpen={isOpen}>
+            <li><SocialListButton id="socialListButton" as="button" onClick={e => setOpen(state => !state)}>Мы в соцсетях</SocialListButton></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/vk.svg" alt="" />{socialName.vk}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/facebook.svg" alt="" />{socialName.fb}</a></li>
-            <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/instagram.svg" alt="" />{socialName.in  }</a></li>
+            <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/instagram.svg" alt="" />{socialName.in}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/twitter.svg" alt="" />{socialName.tw}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/telegram.svg" alt="" />{socialName.tg}</a></li>
         </SocialListLinks>
@@ -65,7 +72,7 @@ const SocialListLinks = styled(RowListLinks)`
         align-items: flex-start;
         gap: 0;
         position: relative;
-        z-index: 1;
+        z-index: 5;
         margin: 0 auto;
         width: 150px;
         height: ${props => {
@@ -85,7 +92,8 @@ const SocialListLinks = styled(RowListLinks)`
         }
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 480px) {
+        width: 130px;
         font-size: 14px;
     }
 `
