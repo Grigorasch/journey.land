@@ -1,25 +1,18 @@
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import SocialList from "../List/SocialList";
+import { environment } from "./langData";
 
 export default function PageHeader({ burgerOnClick }) {
-    const lang = useParams();
-    let title;
-    switch (lang) {
-        case 'en':
-            title = "On Home Page";
-            break
-        case 'ru':
-        default:
-            title = "На Главную";
-    }
+    const { lang } = useParams();
+    const title = environment[lang];
     return (
         <Header>
-            <MainLink to={`/${lang}`}><HeaderLogo title={title}/></MainLink>
+            <MainLink to={`/${lang}`}><HeaderLogo title={title.homePageTooltip} /></MainLink>
             <Division>
                 <SocialList lang={lang}/>
             </Division>
-            <BurgerButton onClick={event => burgerOnClick()}><BurgerSpan></BurgerSpan><BurgerSpan></BurgerSpan><BurgerSpan></BurgerSpan></BurgerButton>
+            <BurgerButton onClick={event => burgerOnClick()}title={title.burgerTooltip}><BurgerSpan></BurgerSpan><BurgerSpan></BurgerSpan><BurgerSpan></BurgerSpan></BurgerButton>
         </Header>
     )
 }

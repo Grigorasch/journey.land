@@ -154,10 +154,10 @@ const AviasalesLink = styled(BannerLink)`
         padding-top: 22px;
     }
 
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 400px) {
         padding-top: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 `
 

@@ -24,17 +24,39 @@ export default function SocialList({ lang }) {
             socialName.tw = 'Твитер'
             socialName.tg = 'Телеграм'
     }
+
+    //При увеличении ширины свыше 690px, когда socialList уже не сворачивается, состояние сбрасывается на спрятанное, чтобы при повторном уменшении экрана список уже был скрыт
     useEffect(() => {
-        document.addEventListener('click', e => {
-            if (e.target.id !== "socialListButton" && isOpen) {
-                setOpen(state => false)
+        mediaQuery.addEventListener('change', event => {
+            if (event.matches) {
+                setOpen(state => false);
             }
-        })
+        });
     }, []);
 
+    // При открытии списка (на экранах, когда список собран в меню) добавляется слушатель на документ, который закроет список в случае клика не по списку.
+    useEffect(() => {
+        const closeList = event => {
+            if (event.target.id !== 'socialList' && event.target.parentElement.id !== 'socialList') {
+                setOpen(state => false);
+            }
+        };
+        if (isOpen) {
+            document.addEventListener('click', closeList);
+        } else {
+            document.removeEventListener('click', closeList);
+        }
+        return () => document.removeEventListener('click', closeList);
+    }, [isOpen]);
+
     return (
-        <SocialListLinks isListOpen={isOpen}>
-            <li><SocialListButton id="socialListButton" as="button" onClick={e => setOpen(state => !state)}>Мы в соцсетях</SocialListButton></li>
+        <SocialListLinks isListOpen={isOpen} id="socialList">
+            <li><SocialListButton as="button" onClick={e => {
+                e.stopPropagation();
+                setOpen(state => !state);
+            }}>
+                <SocialListButtonImg src="/images/icons/social.svg" alt="" />
+            </SocialListButton></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/vk.svg" alt="" />{socialName.vk}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/facebook.svg" alt="" />{socialName.fb}</a></li>
             <li><a href="#" target="_blank"><SocialItemImg src="/images/icons/instagram.svg" alt="" />{socialName.in}</a></li>
@@ -69,21 +91,20 @@ const SocialListLinks = styled(RowListLinks)`
     }
 
     @media screen and (max-width: 690px) {
-        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: start;
         gap: 0;
         position: relative;
         z-index: 5;
         margin: 0 auto;
-        width: 150px;
-        height: ${props => {
-        if (props.isListOpen) {
-            return '300px'
-        } else {
-            return '50px'
-        }
-    }};
+        width: ${props => (props.isListOpen) ? '150px' : '50px'};
+        height: ${props => (props.isListOpen) ? '300px' : '50px'};
         font-size: 16px;
         line-height: 50px;
+        transition: width 0.3s ${props => (props.isListOpen) ? '0s' : '0.3s'},
+            height 0.3s ${props => (props.isListOpen) ? '0.3s' : '0s'};
     }
 
     @media screen and (min-width: 690px) {
@@ -93,7 +114,8 @@ const SocialListLinks = styled(RowListLinks)`
     }
 
     @media screen and (max-width: 480px) {
-        width: 130px;
+        padding: 0;
+        width: ${props => (props.isListOpen) ? '130px' : '50px'};
         font-size: 14px;
     }
 `
@@ -122,3 +144,10 @@ const SocialListButton = styled(Link)`
         text-decoration: underline;
     }
 `
+
+const SocialListButtonImg = styled.img`
+    height: 30px;
+    vertical-align: middle;
+`
+
+const mediaQuery = window.matchMedia('(min-width: 690px)');

@@ -10,16 +10,16 @@ import { useBeforeUnload, useParams } from "react-router-dom";
 
 
 export default function PageAside({ state }) {
-    const lang = useParams();
+    const { lang } = useParams();
     const [isAsideVisible, setAsideVisible] = state;
-    
+
     useEffect(() => {
         mediaQuery.addEventListener('change', event => {
             if (event.matches) {
                 setAsideVisible(value => false);
             }
         });
-    }, [])
+    }, []);
 
     return (
         <Aside isAsideVisible={isAsideVisible}>
@@ -55,7 +55,6 @@ const Aside = styled.aside`
     }
 
     @media  (max-width: 1000px) {
-        /* display: ${props => props.isAsideVisible ? 'block' : 'none'}; */
         margin-left: -2px;
         width: ${props => props.isAsideVisible ? '270' : '0'}px;
         font-size: 16px;

@@ -1,0 +1,19 @@
+<svg width="13" height="22" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="24" width="15" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke-width="0.16" stroke="#a0a0a0" stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier">
+   <g fill-rule="evenodd" fill="none" stroke-width="2" id="Page-1">
+    <g fill="#a0a0a0" id="Dribbble-Light-Preview">
+     <g id="icons">
+      <path id="svg_1" d="m1.36585,20.70769l0,0c0.40491,0.38975 1.06044,0.38975 1.46432,0l8.56324,-8.26356c0.80879,-0.78049 0.80879,-2.04666 0,-2.82714l-8.62538,-8.32453c-0.40077,-0.38575 -1.04801,-0.39074 -1.45396,-0.00999l0,0c-0.41423,0.38874 -0.41941,1.02932 -0.01139,1.42406l7.89425,7.61699c0.40492,0.39074 0.40492,1.02333 0,1.41407l-7.83108,7.55703c-0.40491,0.38975 -0.40491,1.02333 0,1.41307"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

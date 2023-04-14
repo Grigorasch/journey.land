@@ -1,22 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import LanguageButton from "../Button/LanguageButton";
+import { Links } from "./langData";
 
 export default function PageFooter() {
     const { lang } = useParams();
-    const links = {};
-    switch (lang) {
-        case 'en':
-            links.magazine = "Magazine"
-            links.job = "Jobs"
-            links.help = "Help & Support"
-            break
-        case 'ru':
-        default:
-            links.magazine = "Журнал"
-            links.job = "Вакансии"
-            links.help = "Справка и Поддержка"
-    }
+    const links = Links[lang];
+    
     return (
         <Footer>
             <div>
@@ -32,8 +22,7 @@ export default function PageFooter() {
                 <Link to={`/${lang}/company/magazine`}>{links.magazine}</Link>
                 <Link to={`/${lang}/company/job`}>{links.job}</Link>
                 <Link to={`/${lang}/company/help`}>{links.help}</Link>
-                <span>© 2001-2023</span>
-                {/* <Logo src={`/images/icons/${lang}-flag.svg`} alt="Переключатель языка" /> */}
+                <YearWrapper>© 2001-2023</YearWrapper>
                 <LanguageButton />
             </LinksWrapper>
         </Footer>
@@ -127,5 +116,11 @@ const LinksWrapper = styled.div`
         flex-wrap: wrap;
         gap: 10px;
         font-size: 12px;
+    }
+`
+
+const YearWrapper = styled.span`
+    @media screen and (max-width: 450px) {
+        flex-basis: 150px;
     }
 `

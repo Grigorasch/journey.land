@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 export default function Main() {
     const { lang } = useParams();
     const location = useLocation();
-    //Восстанавливаем начальное состояние из памяти или устанавливаем выкл.
+    //Переменая, для состояния бургер меню (показ/скрыт). Начальное состояние востанавливается из памяти или устанавливаем выкл.
     const [isAsideVisible, setAsideVisible] = useState(Boolean(sessionStorage.getItem('isAsideVisible')));
 
     //Перед выгрузкой сохраням состояние в память
@@ -20,10 +20,12 @@ export default function Main() {
         }, [isAsideVisible])
     );
 
+    // При переходе по любой ссылке, экран прокручивается на верх
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+    }, [location.pathname, location.search]);
 
+    // Скрывает боковое меню при переходе по ссылке (для экранов с бургер меню)
     useEffect(() => {
         setAsideVisible(value => false);
     }, [location.pathname, location.search, location.hash])
