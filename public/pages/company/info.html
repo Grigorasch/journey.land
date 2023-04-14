@@ -1,0 +1,71 @@
+<!-- Стили -->
+<style>
+    .wrapper {
+        margin: 0 auto;
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        text-indent: 30px;
+        text-align: justify;
+    }
+
+    .description:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .heading {
+            font-size: 28px;
+            line-height: 38px;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper {
+            padding: 20px;
+        }
+
+        .heading {
+            margin-bottom: 10px;
+            font-size: 26px;
+            line-height: 36px;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .heading {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+</style>
+
+<!-- Разметка -->
+<div class="wrapper">
+    <h1 class="heading">headingPage</h1>
+    <p class="description">description1</p>
+</div>

@@ -1,0 +1,25 @@
+{
+    "ru": {
+        "pageTitle": "О нас",
+        "headingPage": "О нас",
+        "description1": "Компания, которая заботится о Вас и о Вашем бизнесе – это наша главная цель. Мы стремимся быть лучшими и предоставлять качественные услуги и продукты своим клиентам. Наша компания была основана несколько лет назад и с тех пор зарекомендовала себя как надежный и профессиональный партнер.",
+        "description2": "Мы ориентированы не только на удовлетворение потребностей наших клиентов, но и на постоянное совершенствование и улучшение наших продуктов и услуг. Вместе с нашими клиентами мы работаем над поиском оптимальных решений и развитием новых продуктов, которые помогут им эффективнее и успешнее вести свой бизнес.",
+        "description3": "Наши услуги не ограничиваются покупкой и продажей продуктов, мы также проводим консультации и оказываем помощь в выборе наиболее оптимальных решений для бизнеса. Мы работаем с малыми, средними и крупными  компаниями, помогая каждой из них подобрать наилучшие варианты для роста и развития.",
+        "description4": "Мы принимаем во внимание многие факторы, включая специфику бизнеса, рынок, требования клиента и наличие конкуренции. Благодаря этому мы можем предложить наиболее эффективные решения, которые помогут нашим клиентам достичь их целей, улучшить свой бизнес и заработать больше денег.",
+        "description5": "Наша компания учитывает все необходимые детали, чтобы у наших клиентов были все предпосылки для успеха в их бизнесе. Мы следим за новыми тенденциями и разработками на рынке, чтобы предлагать нашим клиентам самые передовые продукты и услуги.",
+        "description6": "Мы уделяем внимание не только зарабатыванию денег, но и социальной ответственности. Мы считаем, что бизнес должен быть не только прибыльным, но и соответствовать социально-этическим стандартам. Мы поддерживаем социальные программы и вносим свой вклад в благотворительные организации.",
+        "description7": "В заключение, наша компания – это надежный и профессиональный бизнес-партнер, который готов направить все свои силы на рост и развитие Вашего бизнеса. Мы ориентированы на постоянное улучшение и развитие, и готовы помочь Вам достигнуть любых целей. С нами Вы будете чувствовать себя уверенно в своих делах!"
+    },
+
+    "en": {
+        "pageTitle": "About us",
+        "headingPage": "About us",
+        "description1": "Our main goal is to care for you and your business. We strive to be the best and provide quality services and products to our customers. Our company was founded several years ago and has since established itself as a reliable and professional partner.",
+        "description2": "We are focused not only on meeting the needs of our clients, but also on constantly improving and enhancing our products and services. Together with our clients, we work on finding optimal solutions and developing new products that will help them run their businesses more efficiently and successfully.",
+        "description3": "Our services are not limited to buying and selling products, we also provide consultations and assistance in selecting the most optimal solutions for businesses. We work with small, medium and large companies, helping each of them to choose the best options for growth and development.",
+        "description4": "We take into account many factors, including the specifics of the business, the market, customer requirements, and the presence of competition. This enables us to offer the most effective solutions that will help our clients achieve their goals, improve their business, and earn more money.",
+        "description5": "Our company takes into account all the necessary details to ensure that our clients have all the prerequisites for success in their business. We keep track of new trends and developments in the market to offer our clients the most advanced products and services.",
+        "description6": "We pay attention not only to making money, but also to social responsibility. We believe that business should not only be profitable, but also adhere to social and ethical standards. We support social programs and contribute to charitable organizations.",
+        "description7": "In conclusion, our company is a reliable and professional business partner that is ready to devote all its efforts to the growth and development of your business. We are focused on continuous improvement and development, and are ready to help you achieve any goals. With us, you will feel confident in your affairs!"
+    }
+}

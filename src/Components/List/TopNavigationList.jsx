@@ -24,8 +24,8 @@ export default function TopNavigationList() {
             <NavigationListLinks>
                 <NavigationListItem><Link to={`/${lang}/aviasales`}><NavigationImg src="/images/icons/plane-ticket.svg" /><NavigationSpan>{links.search}</NavigationSpan></Link></NavigationListItem>
                 <NavigationListItem><Link to={`/${lang}/tripinsurance`}><NavigationImg src="/images/icons/calculating.svg" /><NavigationSpan>{links.insurance}</NavigationSpan></Link></NavigationListItem>
-                <NavigationListItem><a href="./ru-ru/information/"><NavigationImg src="/images/icons/list.svg" /><NavigationSpan>{links.trip}</NavigationSpan></a></NavigationListItem>
-                <NavigationListItem><a href="./ru-ru/documentation/"><NavigationImg src="/images/icons/printing.svg" /><NavigationSpan>{links.get}</NavigationSpan></a></NavigationListItem>
+                <NavigationListItem><Link to={`/${lang}/services/inform`}><NavigationImg src="/images/icons/list.svg" /><NavigationSpan>{links.trip}</NavigationSpan></Link></NavigationListItem>
+                <NavigationListItem><Link to={`/${lang}/services/tickets`}><NavigationImg src="/images/icons/printing.svg" /><NavigationSpan>{links.get}</NavigationSpan></Link></NavigationListItem>
             </NavigationListLinks>
         </NavigationWrapper>
     )

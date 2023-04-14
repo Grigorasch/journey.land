@@ -1,0 +1,31 @@
+{
+    "ru": {
+        "pageTitle": "FAQ",
+        "headingPage": "FAQ",
+        "question1": "1. Какие продукты вы производите?",
+        "answer1": "Мы производим высококачественные продукты, которые удовлетворяют самые высокие стандарты качества и безопасности. Наша продукция включает в себя широкий ассортимент изделий, начиная от электронных компонентов до промышленных машин и оборудования.",
+        "question2": "2. Какова ваша экологическая политика?",
+        "answer2": "Мы стремимся к тому, чтобы наш бизнес был устойчивым и ответственным, и мы принимаем меры для снижения нашего воздействия на окружающую среду. Мы работаем над разработкой экологически чистых продуктов, используем энергоэффективные технологии и внедряем программы утилизации отходов.",
+        "question3": "3. Какова ваша гарантия на продукцию?",
+        "answer3": "Мы гарантируем качество нашей продукции и предоставляем гарантию на все наши изделия. Если у вас возникнут проблемы с продукцией, свяжитесь с нашей службой поддержки клиентов, и мы постараемся решить вашу проблему как можно быстрее.",
+        "question4": "4. Каковы ваши цены?",
+        "answer4": "Мы предлагаем конкурентные цены на нашу продукцию. Мы стараемся сделать нашу продукцию доступной для широкого круга клиентов, не снижая при этом качество.",
+        "question5": "5. Каковы ваши сроки доставки?",
+        "answer5": "Мы стремимся обеспечить быструю и надежную доставку нашей продукции. Сроки доставки могут варьироваться в зависимости от места доставки и типа продукции. Свяжитесь с нами, чтобы узнать более подробную информацию о сроках доставки."
+    },
+
+    "en": {
+        "pageTitle": "FAQ",
+        "headingPage": "FAQ",
+        "question1": "1. What products do you produce?",
+        "answer1": "We produce high-quality products that meet the highest standards of quality and safety. Our product range includes a wide range of items, from electronic components to industrial machinery and equipment.",
+        "question2": "2. What is your environmental policy?",
+        "answer2": "We strive to make our business sustainable and responsible, and we take measures to reduce our impact on the environment. We are working on developing eco-friendly products, using energy-efficient technologies, and implementing waste disposal programs.",
+        "question3": "3. What is your product guarantee?",
+        "answer3": "We guarantee the quality of our products and provide a warranty for all our items. If you have any problems with our products, please contact our customer support service, and we will try to resolve your issue as quickly as possible.",
+        "question4": "4. What are your prices?",
+        "answer4": "We offer competitive prices for our products. We strive to make our products accessible to a wide range of customers without compromising on quality.",
+        "question5": "5. What are your delivery times?",
+        "answer5": "We aim to provide fast and reliable delivery of our products. Delivery times may vary depending on the delivery location and type of product. Please contact us for more detailed information about delivery times."
+    }
+}

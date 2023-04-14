@@ -1,0 +1,96 @@
+<!-- Стили -->
+<style>
+    .wrapper {
+        margin: 0 auto;
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .details__wrapper {
+        margin: 5px 15px 15px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+        cursor: pointer;
+    }
+
+    .details__heading {
+        display: block;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+
+    .details__heading::-webkit-details-marker {
+        display: none;
+    }
+
+    .details__description {
+        padding-top: 15px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: 768px) {
+        .details__heading {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .details__description {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .details__wrapper{
+            margin: 5px 0 15px;
+        }
+
+        .details__heading {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        .details__description {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+</style>
+
+<!-- Разметка -->
+<div class="wrapper">
+    <h1 class="heading">headingPage</h1>
+    <details class="details__wrapper">
+        <summary class="details__heading">question1</summary>
+        <p class="details__description">answer1</p>
+    </details>
+    <details class="details__wrapper">
+        <summary class="details__heading">question2</summary>
+        <p class="details__description">answer2</p>
+    </details>
+    <details class="details__wrapper">
+        <summary class="details__heading">question3</summary>
+        <p class="details__description">answer3</p>
+    </details>
+    <details class="details__wrapper">
+        <summary class="details__heading">question4</summary>
+        <p class="details__description">answer4</p>
+    </details>
+    <details class="details__wrapper">
+        <summary class="details__heading">question5</summary>
+        <p class="details__description">answer5</p>
+    </details>
+</div>

@@ -21,6 +21,11 @@ import Reviews from './Pages/Company/Reviews';
 import Insurance from './Pages/Company/Insurance';
 import Info from './Pages/Company/Info';
 import { createGlobalStyle } from 'styled-components';
+import Magazine from './Pages/Company/Magazine';
+import Jobs from './Pages/Company/Jobs';
+import Help from './Pages/Company/Help';
+import Tickets from './Pages/Services/Tickets';
+import Inform from './Pages/Services/Inform';
 
 const router = createBrowserRouter([
   {
@@ -54,11 +59,6 @@ const router = createBrowserRouter([
       },
       {
         path: "company",
-        // element: <About />,
-        loader: (par) => {
-          console.log(par);
-          return null;
-        },
         children: [
           {
             index: true,
@@ -79,6 +79,31 @@ const router = createBrowserRouter([
           {
             path: "info",
             element: <Info />
+          },
+          {
+            path: "magazine",
+            element: <Magazine />
+          },
+          {
+            path: "job",
+            element: <Jobs />
+          },
+          {
+            path: "help",
+            element: <Help />
+          },
+        ]
+      },
+      {
+        path: "services",
+        children: [
+          {
+            path: "inform",
+            element: <Inform />
+          },
+          {
+            path: "tickets",
+            element: <Tickets />
           }
         ]
       }

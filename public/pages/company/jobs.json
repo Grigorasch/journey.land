@@ -1,0 +1,17 @@
+{
+    "ru": {
+        "pageTitle": "Вакансии",
+        "headingPage": "Вакансии",
+        "description1": "Мы искренне любим и ценим наших сотрудников, ведь они являются неотъемлемой частью нашего успеха. Благодаря их труду и преданности мы продвигаемся вперед и достигаем новых высот.",
+        "description2": "Мы всегда стараемся выразить нашу признательность сотрудникам не только словами, но и делами. Мы регулярно устраиваем бонусы и командные мероприятия, чтобы показать нашу признательность и заботу.",
+        "description3": "Мы приглашаем всех присоединиться к нашей миссии и стать частью нашего видения. Мы гордимся нашей командой, которая воплощает наши мечты в жизнь. Мы обещаем всегда поддерживать и заботиться о каждом из наших сотрудников, ведь они являются для нас не просто коллегами, а частью нашей большой семьи. Именно благодаря им мы сияем и отличаемся на рынке."
+    },
+
+    "en": {
+        "pageTitle": "Jobs",
+        "headingPage": "Jobs",
+        "description1": "We sincerely love and value our employees, as they are an integral part of our success. Thanks to their hard work and dedication, we are moving forward and reaching new heights.",
+        "description2": "We always strive to express our gratitude to our employees not only in words, but also in deeds. We regularly organize bonuses and team-building events to show our appreciation and care.",
+        "description3": "We invite everyone to join our mission and become a part of our vision. We are proud of our team that embodies our dreams into reality. We promise to always support and take care of each of our employees, as they are not just colleagues to us, but a part of our big family. It is thanks to them that we shine and stand out in the market."
+    }
+}
