@@ -11,6 +11,7 @@ import { useBeforeUnload, useParams } from "react-router-dom";
 
 export default function PageAside({ state }) {
     const { lang } = useParams();
+    //Хук useState отвечающий за состояние бургер меню
     const [isAsideVisible, setAsideVisible] = state;
 
     useEffect(() => {
@@ -20,6 +21,7 @@ export default function PageAside({ state }) {
             }
         });
     }, []);
+
 
     return (
         <Aside isAsideVisible={isAsideVisible}>
