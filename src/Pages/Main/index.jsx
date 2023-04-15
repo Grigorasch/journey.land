@@ -6,10 +6,13 @@ import { Outlet, useBeforeUnload, useLocation, useParams } from "react-router-do
 import PageHeader from "../../Components/PageHeader";
 import PageFooter from "../../Components/PageFooter";
 import React, { useEffect, useState } from "react";
+import DialogForm from "../../Components/Form";
 
 export default function Main() {
     const { lang } = useParams();
     const location = useLocation();
+    //Хук useState для состояния формы обратной связи (модального окна)
+    const [dialogState, setDialogState] = useState(false);
     //Переменая, для состояния бургер меню (показ/скрыт). Начальное состояние востанавливается из памяти или устанавливаем выкл.
     const [isAsideVisible, setAsideVisible] = useState(Boolean(sessionStorage.getItem('isAsideVisible')));
 
@@ -32,9 +35,10 @@ export default function Main() {
 
     return (
         <div>
+            <DialogForm modalState={[dialogState, setDialogState]}/>
             <PageHeader burgerOnClick={() => setAsideVisible(value => !value)} />
             <PageGrid>
-                <PageAside state={[isAsideVisible, setAsideVisible]} />
+                <PageAside state={[isAsideVisible, setAsideVisible]} modalState={[dialogState, setDialogState]}/>
                 <MainSide>
                     <Statistic />
                     <TopNavigationList />

@@ -4,9 +4,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   redirect,
-  Route,
   RouterProvider,
-  Routes,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Main from './Pages/Main';
@@ -16,7 +14,6 @@ import Tripinsurance from './Pages/Tripinsurance';
 import MapsMe from './Pages/MapsMe'
 import About from './Pages/Company/About'
 import Faq from './Pages/Company/Faq'
-import { element } from 'prop-types';
 import Reviews from './Pages/Company/Reviews';
 import Insurance from './Pages/Company/Insurance';
 import Info from './Pages/Company/Info';

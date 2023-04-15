@@ -27,10 +27,6 @@ export default function Home() {
             textContent.formHeading = "Куда летите?"
             textContent.formDescription = "Мы знаем лучшие места в разных городах и покажем вам все!"
     }
-    const [myHtml, setHtml] = useState('');
-    useEffect(() => {
-        fetch('/static.html').then(resp => resp.text()).then(data => setHtml(inner => data)).catch(e => console.log(e));
-    }, []);
 
     return (
         <HomePageMain>
@@ -49,7 +45,6 @@ export default function Home() {
                     )
                 })}
             </CardsContainer>
-            <div dangerouslySetInnerHTML={{__html: myHtml}} />
         </HomePageMain>
     )
 }

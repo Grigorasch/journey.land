@@ -1,9 +1,11 @@
 import { useParams } from "react-router";
 import styled from "styled-components"
 
-export function FeedbackButton({ onClick }) {
+export function FeedbackButton({ modalState }) {
     const lang = useParams();
     let label;
+    const [dialogState, setDialogState] = modalState;
+
     switch (lang) {
         case 'en':
             label = "Feedback"
@@ -13,7 +15,12 @@ export function FeedbackButton({ onClick }) {
             label = "Написать"
     }
     return (
-        <Feedback >{label}</Feedback>
+        <Feedback onClick={event => {
+            console.log(dialogState);
+            setDialogState(props => true);
+            console.log(dialogState);
+
+        }}>{label}</Feedback>
     )
 }
 

@@ -9,7 +9,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useBeforeUnload, useParams } from "react-router-dom";
 
 
-export default function PageAside({ state }) {
+export default function PageAside({ state, modalState }) {
     const { lang } = useParams();
     //Хук useState отвечающий за состояние бургер меню
     const [isAsideVisible, setAsideVisible] = state;
@@ -26,7 +26,7 @@ export default function PageAside({ state }) {
     return (
         <Aside isAsideVisible={isAsideVisible}>
             <ButtonWrapper>
-                <FeedbackButton />
+                <FeedbackButton modalState={modalState} />
             </ButtonWrapper>
             <LevelTravelList />
             <TripinsuranceList />
