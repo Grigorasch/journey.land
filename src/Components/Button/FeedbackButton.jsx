@@ -2,10 +2,11 @@ import { useParams } from "react-router";
 import styled from "styled-components"
 
 export function FeedbackButton({ modalState }) {
-    const lang = useParams();
-    let label;
+    const { lang } = useParams();
+    //Хук для управления состоянием модального окна с формой
     const [dialogState, setDialogState] = modalState;
 
+    let label;
     switch (lang) {
         case 'en':
             label = "Feedback"
@@ -14,13 +15,9 @@ export function FeedbackButton({ modalState }) {
         default:
             label = "Написать"
     }
-    return (
-        <Feedback onClick={event => {
-            console.log(dialogState);
-            setDialogState(props => true);
-            console.log(dialogState);
 
-        }}>{label}</Feedback>
+    return (
+        <Feedback onClick={event => setDialogState(props => true)}>{label}</Feedback>
     )
 }
 

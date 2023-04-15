@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useRef } from "react"
 import { Form, useBeforeUnload } from "react-router-dom";
 import styled from "styled-components";
+import CloseButton from "../Button/CloseButton";
+import RefreshButton from "../Button/RefreshButton";
+import { SubmitButton } from "../Button/SubmitButton";
 
 export default function DialogForm({ modalState }) {
     const dialogRef = useRef();
@@ -21,7 +24,6 @@ export default function DialogForm({ modalState }) {
             .then(captcha => {
                 //Устанавливаем ссылку на актуальную капчу
                 setUrlCaptcha(props => URL.createObjectURL(captcha))
-                console.log('OK');
             })
             .catch(error => console.error(error));
     }
@@ -31,34 +33,32 @@ export default function DialogForm({ modalState }) {
         console.log('aa');
     }
     const [dialogState, setDialogState] = modalState;
-
-
+    //Хук для плавного появления и исчезновения модального окна
+    const [formOpacity, setFormOpacity] = useState(0);
 
     useEffect(() => {
-        const closeButton = document.getElementById('close');
-        closeButton.addEventListener('click', closeDialog);
         dialogRef.current.addEventListener('close', closeDialog);
-        dialogRef.current.addEventListener('show', getCaptcha);
 
         return () => {
-            closeButton.removeEventListener('click', closeDialog);
             dialogRef.current.removeEventListener('close', closeDialog);
-            dialogRef.current.removeEventListener('show', getCaptcha);
         }
     }, []);
 
     useEffect(() => {
         if (dialogState) {
             getCaptcha();
-            dialogRef.current.showModal();
+            dialogRef.current.showModal()
+            setTimeout(() => setFormOpacity(1), 100);
         } else {
-            dialogRef.current.close();
+            setFormOpacity(0);
+            setTimeout(() => dialogRef.current.close(), 400);
         }
     }, [dialogState]);
 
     return (
-        <FeedbackDialog ref={dialogRef} open={true} >
-            <FeedbackForm>
+        <FeedbackDialog ref={dialogRef} onClick={closeDialog} formOpacity={formOpacity} >
+            <FeedbackForm onClick={event => event.stopPropagation()}>
+                <CloseButton onClick={closeDialog}/>
                 <FormHeading>Закажи обратный звонок</FormHeading>
                 <FormDescription>Укажите контактные данные и мы обязательно свяжемся с Вами.</FormDescription>
                 <FormFieldLabel htmlFor="name">*Ваше имя</FormFieldLabel>
@@ -67,26 +67,43 @@ export default function DialogForm({ modalState }) {
                 <FormField type="text" name="phone" id="phone" />
                 <FormFieldLabel htmlFor="email">*Email</FormFieldLabel>
                 <FormField type="text" name="email" id="email" />
-                <CaptchaImg src={urlCaptcha} alt="Капча" id="captcha" />
+                <CaptchaWrapper>
+                    <CaptchaImg src={urlCaptcha} alt="Капча" id="captcha" />
+                    <RefreshButton onClick={getCaptcha} />
+                </CaptchaWrapper>
                 <CaptchaField type="text" name="captcha" id="captcha" />
-                <button type="submit" id="submit">Отправить заявку</button>
-                <button aria-label="Закрыть" id="close">X</button>
+                <SubmitButton />
             </FeedbackForm>
         </FeedbackDialog>
     )
 }
 
 const FeedbackDialog = styled.dialog`
-    background: #211e21;
-    border: 2px solid #4f4c4e;
-    border-radius: 10px;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    background: #211e21b0;
+    transition: opacity 0.3s;
+    opacity: ${props => props.formOpacity};
 `
 
 const FeedbackForm = styled(Form)`
+    position: relative;
+    top: 50%;
+    transform:translateY(-50%);
+
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
     max-width: 400px;
     color: #ffffff;
+    background: #211e21;
+    border: 2px solid #4f4c4e;
+    border-radius: 10px;
 `
 
 const FormHeading = styled.h1`
@@ -148,6 +165,7 @@ const FormField = styled.input`
     font-size: 16px; 
     font-weight: 500; 
     line-height: 18px;
+    border-radius: 5px;
 
     @media screen and (max-width: 650px) {
         font-size: 14px;
@@ -159,20 +177,26 @@ const FormField = styled.input`
         line-height: 14px;
     }
 `
+const CaptchaWrapper = styled.div`
+    text-align: center;    
+`
 
 const CaptchaImg = styled.img`
-    margin: 0 auto 10px;
+    vertical-align: middle;
+    margin: 20px 15px 10px 0;
     width: 200px;
     height: 50px;
 `
 
 const CaptchaField = styled.input`
+    vertical-align: text-top;
     margin: 0 auto 30px;
     padding: 5px 10px;
-    width: 200px;
+    width: 150px;
     font-size: 16px; 
     font-weight: 400; 
     line-height: 18px;
+    border-radius: 5px;
 
     @media screen and (max-width: 650px) {
         font-size: 14px;
