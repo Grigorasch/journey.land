@@ -25,7 +25,7 @@ function generateCaptcha()
     $code = strval($code);
     for ($i = 0; $i < strlen($code); $i++) {
         $char_color = imagecolorallocate($image, rand(0, 255), rand(0, 255), rand(0, 255));
-        imagettftext($image, 25, rand(-10, 10), ($i * 35) + rand(-5, 5), rand(30, 40), $char_color, $font, $code[$i]);
+        imagettftext($image, 25, rand(-10, 10), ($i * 35) + rand(-5, 5) + 20, rand(30, 40), $char_color, $font, $code[$i]);
     }
 
     // Рисуем 3 произвольные линии случайного цвета

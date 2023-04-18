@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { ColumnListLinks, Div, ListImg } from ".";
 
 export default function LevelTravelList() {
-    const lang = localStorage.getItem('lang');
+    const { lang } = useParams();
     const links = {};
     switch (lang) {
         case 'en':
@@ -26,12 +26,12 @@ export default function LevelTravelList() {
         <Div>
             <ListImg src='/images/list/level-travel.png' />
             <ColumnListLinks>
-                <li><a href="./ru/leveltravel/hot/">{links.hot}</a></li>
-                <li><a href="./ru/leveltravel/calendar/">{links.calendar}</a></li>
-                <li><a href="./ru/leveltravel/statistics/">{links.statistics}</a></li>
-                <li><a href="./ru/leveltravel/tours/">{links.tours}</a></li>
-                <li><a href="./ru/leveltravel/hotels/">{links.hotel}</a></li>
-                <li><a href="./ru/leveltravel/main/">{links.home}</a></li>
+                <li><a href={`./${lang}/leveltravel/hot/`}>{links.hot}</a></li>
+                <li><a href={`./${lang}/leveltravel/calendar/`}>{links.calendar}</a></li>
+                <li><a href={`./${lang}/leveltravel/statistics/`}>{links.statistics}</a></li>
+                <li><a href={`./${lang}/leveltravel/tours/`}>{links.tours}</a></li>
+                <li><a href={`./${lang}/leveltravel/hotels/`}>{links.hotel}</a></li>
+                <li><a href={`./${lang}/leveltravel/main/`}>{links.home}</a></li>
             </ColumnListLinks>
         </Div>
     )

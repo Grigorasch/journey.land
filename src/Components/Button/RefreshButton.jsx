@@ -15,4 +15,5 @@ const Refresh = styled.button`
 
 const RefreshImg = styled.img`
     height: 25px;
+    vertical-align: text-top;
 `

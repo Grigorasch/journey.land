@@ -21,8 +21,6 @@ export default function TripinsuranceList() {
             links.year = "Годовая страховка"
     }
 
-    let [searchParams, setSearchParams] = useSearchParams();
-
     return (
         <Div>
             <ListImg src='/images/list/tripinsurance.png' backgroundColor='#7358e5' />

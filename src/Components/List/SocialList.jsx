@@ -120,10 +120,6 @@ const SocialListLinks = styled(RowListLinks)`
     }
 `
 
-const HiddenListItem = styled.li`
-    display: none;
-`
-
 const SocialItemImg = styled.img`
     margin-right: 0.4em;
     width: 1.2em;
