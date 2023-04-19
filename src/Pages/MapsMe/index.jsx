@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { PageMain } from "../../Components/PageMain";
 
@@ -12,11 +11,6 @@ export default function MapsMe() {
                 <div><CardImage src="/images/mapsme/IMG_4290.png" /></div>
                 <Card image="/images/mapsme/IMG_4294.png" />
                 <CardSize image="/images/mapsme/IMG_4301.jpg" />
-                {/* <CardWrapper><CardImage src="/images/mapsme/IMG_4292.png" /></CardWrapper>
-                <CardWrapper><CardImage src="/images/mapsme/IMG_4293.png" /></CardWrapper>
-                <CardWrapper><CardImage src="/images/mapsme/IMG_4295.png" /></CardWrapper>
-                <CardWrapper><CardImage src="/images/mapsme/IMG_4294.png" /></CardWrapper>
-                <CardWrapper><CardImage src="/images/mapsme/IMG_4301.jpg" /></CardWrapper> */}
                 <ContentWrapper>ТЕКСТ</ContentWrapper>
             </GridWrapper>
         </PageMain>

@@ -111,7 +111,7 @@ export default function DialogForm({ modalState }) {
             <FeedbackForm
                 ref={formRef}
                 onMouseDown={event => event.stopPropagation()}
-                onSubmit={event => formSubmit(event, lang, setValidateMessage, formRef, getCaptcha)}
+                onSubmit={event => formSubmit(event, lang, setValidateMessage, formRef, getCaptcha, closeDialog)}
                 action="post">
                 <CloseButton onClick={closeDialog} />
                 <FormHeading>{formText.formHeading}</FormHeading>
@@ -201,7 +201,7 @@ function inputPhone(event, phone, setPhone) {
 }
 
 //Отправка формы
-function formSubmit(event, lang, setValidateMessage, formRef, getCaptcha) {
+function formSubmit(event, lang, setValidateMessage, formRef, getCaptcha, closeDialog) {
     event.preventDefault();
     let isFormValidate = true;
     const validateStatus = formFieldValidate(event);
@@ -217,13 +217,13 @@ function formSubmit(event, lang, setValidateMessage, formRef, getCaptcha) {
     }
 
     if (isFormValidate) {
-        sendRequest(formRef);
+        sendRequest(formRef, setValidateMessage, lang, getCaptcha, closeDialog);
         getCaptcha();
     }
 }
 
 //Отправка запроса на сервер и обработка ответа
-function sendRequest(formRef) {
+function sendRequest(formRef, setValidateMessage, lang, getCaptcha, closeDialog) {
     const formData = new FormData(formRef.current);
     formData.append('type', 'put');
     fetch('/php/send.php', {
@@ -231,7 +231,25 @@ function sendRequest(formRef) {
         body: formData
     })
         .then(response => response.text())
-        .then(data => console.log(data))
+        .then(data => {
+            switch (data) {
+                case "Missing Captcha Field":
+                case "Invalid Captcha":
+                    setValidateMessage.captcha(regexpFormField.captcha[lang]);
+                    break
+                case "Captcha Timeout":
+                    getCaptcha();
+                    break
+                case "Error Sending Email":
+
+                    break
+                case "Success":
+                    closeDialog();
+                    break;
+                default:
+                    console.log('Message request ' + data);
+            }
+        })
         .catch(error => console.error(error));
 
 }

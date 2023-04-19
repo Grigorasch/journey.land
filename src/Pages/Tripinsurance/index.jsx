@@ -43,7 +43,7 @@ export default function Tripinsurance() {
                 formParams.defaultCountry = '';
                 for (let key in Countries) {
                     const Country = Countries[key]
-                        .find(item => item.id == country);
+                        .find(item => item.id === country);
                     if (Country) {
                         formParams.defaultCountry = `&fullModuleModel.DefaultCountry=${Country.idOrigin}`;
                         if (searchParams.get('head') === '4') {

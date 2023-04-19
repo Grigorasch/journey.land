@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router";
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router";
 import styled from "styled-components";
 import Banner from "../../Components/HomePage/Banner";
 import Card from "../../Components/HomePage/Card";
