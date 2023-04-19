@@ -77,30 +77,11 @@ export default function DialogForm({ modalState }) {
         }
         inputCollection[inputCollection.length - 1].addEventListener('keydown', inputCollection[1].focus())
 
-        // Действие при отправки формы
-        dialog.addEventListener('submit', event => {
-            event.preventDefault();
-            const validateStatus = formFieldValidate(event);
-
-            for (let key in validateStatus) {
-                if (validateStatus[key]) {
-                    setValidateMessage[key](validateStatus[key][lang]);
-                } else {
-                    setValidateMessage[key]('');
-                }
-            }
-
-            if (!nameValidate && !phoneValidate && !emailValidate && !captchaValidate) {
-                sendRequest(formRef);
-            }
-        })
-
         return () => {
             dialog.removeEventListener('close', closeDialog);
         }
     }, []);
 
-    //
     //Хук для обработки текущего состояния формы. Открывает и закрывает её в соответствии со хуком useState
     useEffect(() => {
         if (dialogState) {
@@ -123,8 +104,15 @@ export default function DialogForm({ modalState }) {
     }, [dialogState]);
 
     return (
-        <FeedbackDialog ref={dialogRef} onMouseDown={closeDialog} formOpacity={formOpacity} >
-            <FeedbackForm ref={formRef} onMouseDown={event => event.stopPropagation()} action="post">
+        <FeedbackDialog
+            ref={dialogRef}
+            onMouseDown={closeDialog}
+            formOpacity={formOpacity} >
+            <FeedbackForm
+                ref={formRef}
+                onMouseDown={event => event.stopPropagation()}
+                onSubmit={event => formSubmit(event, lang, setValidateMessage, formRef, getCaptcha)}
+                action="post">
                 <CloseButton onClick={closeDialog} />
                 <FormHeading>{formText.formHeading}</FormHeading>
                 <FormDescription>{formText.formDescription}</FormDescription>
@@ -187,7 +175,6 @@ export default function DialogForm({ modalState }) {
 }
 
 function inputPhone(event, phone, setPhone) {
-    console.log(event.keyCode);
     let currentCaret = event.target.selectionStart;
     let isAuto = true;
 
@@ -213,6 +200,28 @@ function inputPhone(event, phone, setPhone) {
     }
 }
 
+//Отправка формы
+function formSubmit(event, lang, setValidateMessage, formRef, getCaptcha) {
+    event.preventDefault();
+    let isFormValidate = true;
+    const validateStatus = formFieldValidate(event);
+
+    for (let key in validateStatus) {
+        if (validateStatus[key]) {
+            setValidateMessage[key](validateStatus[key][lang]);
+            isFormValidate = false;
+        } else {
+            setValidateMessage[key]('');
+            isFormValidate = isFormValidate && true;
+        }
+    }
+
+    if (isFormValidate) {
+        sendRequest(formRef);
+        getCaptcha();
+    }
+}
+
 //Отправка запроса на сервер и обработка ответа
 function sendRequest(formRef) {
     const formData = new FormData(formRef.current);
@@ -224,6 +233,7 @@ function sendRequest(formRef) {
         .then(response => response.text())
         .then(data => console.log(data))
         .catch(error => console.error(error));
+
 }
 
 /**

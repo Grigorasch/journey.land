@@ -34,7 +34,7 @@ if (isset($_POST['type']) && !empty($_POST['type'])) {
                             // Очищаем email от нежелательных символов
                             $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
                             // Формируем сообщение для отправки
-                            $message = "Телефон: " . $phone . "\nИмя: " . $name . "\nEmail: " . $email;
+                            $message = "Телефон: +" . $phone . "\nИмя: " . $name . "\nEmail: " . $email;
                             // Формируем заголовки для отправки письма
                             $headers = "From: " . $email . "\r\n" . "Reply-To: " . $email . "\r\n";
                             // Отправляем письмо на указанный email
