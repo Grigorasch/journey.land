@@ -1,4 +1,5 @@
 export default async function loadContent(path, lang, setInner) {
+    console.log('loadContent');
     //Получаем данные страницы. Сначала содержимое страницы, затем разметку
     let response = await fetch(`${path}.json`);
     const textContent = await response.json();

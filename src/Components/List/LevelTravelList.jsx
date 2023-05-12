@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ColumnListLinks, Div, ListImg } from ".";
 
 export default function LevelTravelList() {
@@ -26,12 +26,12 @@ export default function LevelTravelList() {
         <Div>
             <ListImg src='/images/list/level-travel.png' />
             <ColumnListLinks>
-                <li><a href={`./${lang}/leveltravel/hot/`}>{links.hot}</a></li>
-                <li><a href={`./${lang}/leveltravel/calendar/`}>{links.calendar}</a></li>
-                <li><a href={`./${lang}/leveltravel/statistics/`}>{links.statistics}</a></li>
-                <li><a href={`./${lang}/leveltravel/tours/`}>{links.tours}</a></li>
-                <li><a href={`./${lang}/leveltravel/hotels/`}>{links.hotel}</a></li>
-                <li><a href={`./${lang}/leveltravel/main/`}>{links.home}</a></li>
+                <li><Link to={`/${lang}/leveltravel/hot/`}>{links.hot}</Link></li>
+                <li><Link to={`/${lang}/leveltravel/calendar/`}>{links.calendar}</Link></li>
+                <li><Link to={`/${lang}/leveltravel/statistics/`}>{links.statistics}</Link></li>
+                <li><Link to={`/${lang}/leveltravel/tours/`}>{links.tours}</Link></li>
+                <li><Link to={`/${lang}/leveltravel/hotels/`}>{links.hotel}</Link></li>
+                <li><Link to={`/${lang}/leveltravel/`}>{links.home}</Link></li>
             </ColumnListLinks>
         </Div>
     )

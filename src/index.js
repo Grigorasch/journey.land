@@ -23,6 +23,7 @@ import Jobs from './Pages/Company/Jobs';
 import Help from './Pages/Company/Help';
 import Tickets from './Pages/Services/Tickets';
 import Inform from './Pages/Services/Inform';
+import LevelTravelHome from './Pages/LevelTravel/Home';
 
 const router = createBrowserRouter([
   {
@@ -102,6 +103,35 @@ const router = createBrowserRouter([
             path: "tickets",
             element: <Tickets />
           }
+        ]
+      },
+      {
+        path: "leveltravel",
+        children: [
+          {
+            index: true,
+            element: <LevelTravelHome />
+          },
+          {
+            path: "hot",
+            element:  <LevelTravelHome />
+          },
+          {
+            path: "calendar",
+            element:  <LevelTravelHome />
+          },
+          {
+            path: "statistics",
+            element:  <LevelTravelHome />
+          },
+          {
+            path: "tours",
+            element:  <LevelTravelHome />
+          },
+          {
+            path: "hotels",
+            element:  <LevelTravelHome />
+          },
         ]
       }
     ],

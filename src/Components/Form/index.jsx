@@ -238,7 +238,7 @@ function sendRequest(formRef, setValidateMessage, lang, getCaptcha, closeDialog)
                     setValidateMessage.captcha(regexpFormField.captcha[lang]);
                     break
                 case "Captcha Timeout":
-                    getCaptcha0();
+                    getCaptcha();
                     break
                 case "Error Sending Email":
 
